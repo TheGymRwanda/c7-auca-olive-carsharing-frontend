@@ -1,14 +1,9 @@
-
-import React from 'react'
-
-
 function MenuBar() {
   return (
-    <div className='flex flex-row w-full h-16 bg-black'>
-        <div className='flex-1 h-4 w-4 bg-yellow-500'></div>
-        <div className='flex-1 h-4 w-4 bg-red-950'></div>
-        <div className='flex-1 h-4 w-4 bg-green-800'></div>
-
+    <div className="flex h-16 w-full flex-row bg-black gap-8">
+      <div className="h-16 w-4 flex-1 bg-yellow-500"></div>
+      <div className="h-16 w-4 flex-1 bg-red-950"></div>
+      <div className="h-16 w-4 flex-1 bg-green-800"></div>
     </div>
   )
 }
