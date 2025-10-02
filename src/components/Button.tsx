@@ -45,7 +45,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       primary:
         'bg-white text-teal-700 hover:bg-gray-50 focus:ring-teal-500 shadow-sm hover:shadow-md',
       secondary:
-        'text-white hover:bg-teal-700 focus:ring-teal-500 bg-[#327ba8] shadow-sm hover:shadow-md',
+        'text-white hover:bg-teal-700 focus:ring-teal-500 bg-[#226485] shadow-sm hover:shadow-md',
       outline:
         'border-2 border-white text-white bg-transparent hover:bg-white hover:text-teal-700 focus:ring-white',
       ghost: 'text-teal-700 hover:bg-teal-50 focus:ring-teal-500',
@@ -78,7 +78,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const renderIcon = () => {
       if (loading) {
         return (
-          <svg className="h-4 w-4 animate-spin" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+          <svg className="size-4 animate-spin" fill="none" viewBox="0 0 24 24" aria-hidden="true">
             <circle
               className="opacity-25"
               cx="12"
@@ -96,7 +96,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         )
       }
       return icon ? (
-        <span className="flex-shrink-0" aria-hidden="true">
+        <span className="shrink-0" aria-hidden="true">
           {icon}
         </span>
       ) : null

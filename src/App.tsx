@@ -1,6 +1,5 @@
 import { ReactElement } from 'react'
 import { configure } from 'axios-hooks'
-import ReusableButton from './components/Button'
 import Button from './components/Button'
 
 // Configure axios hooks
@@ -18,17 +17,8 @@ function App(): ReactElement {
       <p>If you can read this, you have successfully started the base frontend repository!</p>
       <p>Happy coding!</p>
       <Button variant="secondary">Book Car</Button>
-
-      {/* Added button variants for demonstration */}
-      <div className="flex gap-4">
-        <Button variant="ghost">Accept</Button>
-        <Button variant="primary">Decline</Button>
-      </div>
-
-      <div className="flex gap-4">
-        <Button variant="primary">Use Car</Button>
-        <Button variant="secondary">Return</Button>
-      </div>
+      <Button variant="ghost">Accept</Button>
+      <Button variant="primary">Decline</Button>
     </main>
   )
 }
