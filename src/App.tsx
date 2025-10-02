@@ -1,10 +1,7 @@
 import { ReactElement } from 'react'
 import { configure } from 'axios-hooks'
-import { Routes, Route } from 'react-router-dom'
-import HomePage from './pages/HomePage'
+import { AppRoutes } from './routes'
 
-// Configure axios hooks
-// Do not delete this if you want to use the provided API hooks in `src/hooks`
 configure({
   defaultOptions: {
     autoCancel: false,
@@ -12,13 +9,7 @@ configure({
 })
 
 function App(): ReactElement {
-  return (
-    <>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-      </Routes>
-    </>
-  )
+  return <AppRoutes />
 }
 
 export default App
