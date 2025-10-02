@@ -39,24 +39,18 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ref,
   ) => {
     const baseClasses =
-      'inline-flex items-center justify-center font-medium rounded-full transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed'
+      'inline-flex items-center justify-center font-medium rounded-full transition-all duration-200 ease-in-out focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed'
 
     const variantClasses = {
-      primary:
-        'bg-white text-teal-700 hover:bg-gray-50 focus:ring-teal-500 shadow-sm hover:shadow-md',
-      secondary:
-        'text-white hover:bg-teal-700 focus:ring-teal-500 bg-[#226485] shadow-sm hover:shadow-md',
-      outline:
-        'border-2 border-white text-white bg-transparent hover:bg-white hover:text-teal-700 focus:ring-white',
-      ghost: 'text-teal-700 hover:bg-teal-50 focus:ring-teal-500',
-      destructive:
-        'bg-red-600 text-white hover:bg-red-700 focus:ring-red-500 shadow-sm hover:shadow-md',
-      success:
-        'bg-green-600 text-white hover:bg-green-700 focus:ring-green-500 shadow-sm hover:shadow-md',
-      warning:
-        'bg-orange-500 text-white hover:bg-orange-600 focus:ring-orange-500 shadow-sm hover:shadow-md',
-      info: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500 shadow-sm hover:shadow-md',
-      link: 'text-teal-600 underline-offset-4 hover:underline focus:ring-teal-500 p-0 h-auto',
+      primary: 'bg-white text-teal-700  shadow-sm hover:shadow-md',
+      secondary: 'text-white  bg-[#226485] shadow-sm hover:shadow-md',
+      outline: 'border-2 border-white text-white bg-transparent focus:ring-white hover:shadow-md',
+      ghost: 'text-teal-700  hover:shadow-md',
+      destructive: 'bg-red-600 text-white shadow-sm hover:shadow-md',
+      success: 'bg-green-600 text-white  shadow-sm hover:shadow-md',
+      warning: 'bg-orange-500 text-white  shadow-sm hover:shadow-md',
+      info: 'bg-blue-600 text-white  shadow-sm hover:shadow-md',
+      link: 'text-teal-600 underline-offset-4 hover:underline  p-0 h-auto',
     }
 
     const sizeClasses = {
