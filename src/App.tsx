@@ -1,6 +1,7 @@
 import { ReactElement } from 'react'
 import { configure } from 'axios-hooks'
 import CarDetails from './components/CarDetails'
+import { AppRoutes } from './routes'
 
 configure({
   defaultOptions: {
@@ -10,9 +11,12 @@ configure({
 
 function App(): ReactElement {
   return (
-    <section className="mx-auto flex min-h-screen justify-center items-center flex-col gap-8 py-10 bg-[#265e78] text-white">
-      <CarDetails />
-    </section>
+    <>
+      <AppRoutes />
+      <section className="mx-auto flex min-h-screen justify-center items-center flex-col gap-8 py-10 bg-[#265e78] text-white">
+        <CarDetails />
+      </section>
+    </>
   )
 }
 
