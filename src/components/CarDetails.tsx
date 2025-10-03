@@ -7,9 +7,8 @@ import plateNumber from '../assets/plateNumberIcon.png'
 import yellowCar from '../assets/yellowCar.png'
 
 const CarDetails = () => (
-  <div className="p-10">
-    <h1>DETAILS</h1>
-    <img src={yellowCar} className="w-[356] and h-[198]" alt="" />
+  <div>
+    <img src={yellowCar} className="w-[356] h-[198]" alt="" />
     <h3>Tini Titan</h3>
     <div className="flex gap-2">
       <ProfileIcon />
