@@ -1,8 +1,8 @@
-import CalendarIcon from '../assets/CalendarIcon'
+import carsM from '../assets/carsM.png'
 import CarIcon from '../assets/CarIcon'
 import CarPlusIcon from '../assets/CarPlusIcon'
-import CarsIcon from '../assets/CarsIcon'
-import LogoutIcon from '../assets/LogoutIcon'
+import logout from '../assets/logout.png'
+import stairs from '../assets/stairs.png'
 
 const Drawer = () => (
   <div className="ml-16 mt-16 flex h-80 w-72 flex-1 flex-col items-center justify-center rounded-lg bg-[#3e7591] ">
@@ -12,7 +12,7 @@ const Drawer = () => (
         <p>Book A Car</p>
       </div>
       <div className="flex flex-row space-x-4">
-        <CalendarIcon />
+        <img src={stairs} className="" />
         <p>My Bookings</p>
       </div>
     </div>
@@ -21,7 +21,7 @@ const Drawer = () => (
     </div>
     <div className="mb-3 mt-4 flex h-full w-full flex-col space-y-3 bg-[#3e7591] pl-20 text-white ">
       <div className="flex flex-row space-x-4">
-        <CarsIcon />
+        <img src={carsM} />
         <p>See My Cars</p>
       </div>
       <div className="flex flex-row space-x-4">
@@ -38,7 +38,7 @@ const Drawer = () => (
     </div>
     <div className="mt-4 flex h-full w-full flex-col space-y-3 rounded-b-lg bg-[#3e7591]  pl-20 text-white">
       <div className="flex flex-row space-x-4">
-        <LogoutIcon />
+        <img src={logout} />
         <p>Log Out</p>
       </div>
     </div>
