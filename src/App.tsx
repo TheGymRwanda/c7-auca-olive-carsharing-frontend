@@ -1,8 +1,8 @@
 import { ReactElement } from 'react'
 import { configure } from 'axios-hooks'
 import CarCard from './pages/CarCard'
-// Configure axios hooks
-// Do not delete this if you want to use the provided API hooks in `src/hooks`
+import { AppRoutes } from './routes'
+
 configure({
   defaultOptions: {
     autoCancel: false,
@@ -10,7 +10,12 @@ configure({
 })
 
 function App(): ReactElement {
-  return <CarCard />
+  return (
+    <>
+      <AppRoutes />
+      <CarCard />
+    </>
+  )
 }
 
 export default App
