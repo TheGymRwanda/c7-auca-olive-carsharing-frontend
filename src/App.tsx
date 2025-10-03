@@ -9,7 +9,11 @@ configure({
 })
 
 function App(): ReactElement {
-  return <AppRoutes />
+  return (
+    <>
+      <AppRoutes />
+    </>
+  )
 }
 
 export default App
