@@ -12,7 +12,7 @@ export default function CarCard() {
           <img src={cr} alt="" />
         </div>
         <div className="flex flex-col gap-3 text-white">
-          <p className="text-3xl">Mighty Mouse</p>
+          <p className="text-3xl">Mighty Mouse </p>
           <div className="flex gap-2">
             <ProfileIcon />
             <p className="text-xl">Manuela</p>
