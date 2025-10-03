@@ -2,7 +2,7 @@ import { FC } from 'react'
 import { useNavigate } from 'react-router-dom'
 import unionImage from './assets/Union.png'
 
-const ErrorPage: FC = () => {
+const Error: FC = () => {
   const navigate = useNavigate()
 
   return (
@@ -24,4 +24,4 @@ const ErrorPage: FC = () => {
   )
 }
 
-export default ErrorPage
+export default Error
