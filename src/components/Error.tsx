@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { useNavigate } from 'react-router-dom'
-import unionImage from './assets/Union.png'
+import unionImage from './../assets/Union.png'
 
 const Error: FC = () => {
   const navigate = useNavigate()
