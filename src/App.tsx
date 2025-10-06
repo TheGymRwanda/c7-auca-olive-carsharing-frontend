@@ -11,10 +11,7 @@ configure({
 })
 
 function App(): ReactElement {
-  return (
- 
-    <Drawer />
-  )
+  return <Drawer />
 }
 
 export default App
