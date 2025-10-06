@@ -11,10 +11,7 @@ configure({
 })
 
 function App(): ReactElement {
-  return (
-   
-    <MenuBar />
-  )
+  return <MenuBar />
 }
 
 export default App
