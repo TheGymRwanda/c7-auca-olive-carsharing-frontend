@@ -6,36 +6,62 @@ import danger from '../assets/dangerIcon.png'
 import plateNumber from '../assets/plateNumberIcon.png'
 import yellowCar from '../assets/yellowCar.png'
 
-const CarDetails = () => (
+interface CarDetailsProps {
+  carName?: string
+  owner?: string
+  model?: string
+  plate?: string
+  horsepower?: string
+  fuelType?: string
+  restriction?: string
+  image?: string
+}
+
+const CarDetails = ({
+  carName = 'Tini Titan',
+  owner = 'Anna',
+  model = 'Countryman',
+  plate = 'M-LK-3456',
+  horsepower = '122hp',
+  fuelType = 'Petrol',
+  restriction = 'No Smoking',
+  image = yellowCar,
+}: CarDetailsProps) => (
   <div>
-    <img src={yellowCar} className="w-[356] h-[198]" alt="" />
+    <img src={image} className="w-[356px] h-[198px]" alt={carName} />
     <div className="pl-6 pt-2 flex flex-col gap-2">
-      <h3 className="mt-16 mb-8 text-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>
-        Tini Titan
+      <h3 className="mt-16 mb-8 text-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>
+        {carName}
       </h3>
+
       <div className="flex gap-3 items-center">
         <ProfileIcon />
-        <span>Anna</span>
+        <span>{owner}</span>
       </div>
+
       <div className="flex gap-2 items-center">
         <CarIcon />
-        <span>Countryman</span>
+        <span>{model}</span>
       </div>
+
       <div className="flex gap-2 items-center">
         <img src={plateNumber} alt="Plate number icon" />
-        <span>M-LK-3456</span>
+        <span>{plate}</span>
       </div>
+
       <div className="flex gap-2 items-center">
         <HorseIcon />
-        <span>122hp</span>
+        <span>{horsepower}</span>
       </div>
+
       <div className="flex gap-2 items-center">
         <FuelIcon />
-        <span>Petrol</span>
+        <span>{fuelType}</span>
       </div>
+
       <div className="flex gap-2 items-center">
-        <img src={danger} alt="No smoking icon" />
-        <span className="font-bold">No Smoking</span>
+        <img src={danger} alt="Restriction icon" />
+        <span className="font-bold">{restriction}</span>
       </div>
     </div>
   </div>
