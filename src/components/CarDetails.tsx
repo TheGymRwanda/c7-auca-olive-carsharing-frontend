@@ -9,30 +9,34 @@ import yellowCar from '../assets/yellowCar.png'
 const CarDetails = () => (
   <div>
     <img src={yellowCar} className="w-[356] h-[198]" alt="" />
-    <h3>Tini Titan</h3>
-    <div className="flex gap-2">
-      <ProfileIcon />
-      <span>Anna</span>
-    </div>
-    <div className="flex gap-2">
-      <CarIcon />
-      <span>Countryman</span>
-    </div>
-    <div className="flex gap-2">
-      <img src={plateNumber} alt="Plate number icon" />
-      <span>M-LK-3456</span>
-    </div>
-    <div className="flex gap-2">
-      <HorseIcon />
-      <span>122hp</span>
-    </div>
-    <div className="flex gap-2">
-      <FuelIcon />
-      <span>Petrol</span>
-    </div>
-    <div className="flex gap-2">
-      <img src={danger} alt="No smoking icon" />
-      <span className="font-bold">No Smoking</span>
+    <div className="pl-6 pt-2 flex flex-col gap-2">
+      <h3 className="mt-16 mb-8 text-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>
+        Tini Titan
+      </h3>
+      <div className="flex gap-3 items-center">
+        <ProfileIcon />
+        <span>Anna</span>
+      </div>
+      <div className="flex gap-2 items-center">
+        <CarIcon />
+        <span>Countryman</span>
+      </div>
+      <div className="flex gap-2 items-center">
+        <img src={plateNumber} alt="Plate number icon" />
+        <span>M-LK-3456</span>
+      </div>
+      <div className="flex gap-2 items-center">
+        <HorseIcon />
+        <span>122hp</span>
+      </div>
+      <div className="flex gap-2 items-center">
+        <FuelIcon />
+        <span>Petrol</span>
+      </div>
+      <div className="flex gap-2 items-center">
+        <img src={danger} alt="No smoking icon" />
+        <span className="font-bold">No Smoking</span>
+      </div>
     </div>
   </div>
 )
