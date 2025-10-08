@@ -2,8 +2,12 @@ import MoniShareTitle from '../components/MoniShareTitle'
 
 const HomePage = () => (
   <>
-    <main className="bg-[#265e78]">
+    <main className="mt-20">
       <MoniShareTitle />
+      <p className="text-center text-white mt-10 font-medium text-lg">
+        Hello Manuela!
+        <br /> What are you up to today?
+      </p>
     </main>
   </>
 )

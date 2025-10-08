@@ -1,8 +1,8 @@
 const MoniShareTitle = () => (
-  <div className="text-white">
-    <h1>Moni</h1>
-    <h2>Share</h2>
-  </div>
+  <h1 className="text-white font-lora text-2xl flex flex-col text-center">
+    <span className="font-bold text-5xl">MONI</span>
+    <span className="font-medium text-4xl">share</span>
+  </h1>
 )
 
 export default MoniShareTitle
