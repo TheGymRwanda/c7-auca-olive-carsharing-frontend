@@ -1,6 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import { MdOutlineArrowBackIosNew } from 'react-icons/md'
-
+import back from '../assets/Back.png'
 function BackButton() {
   const navigate = useNavigate()
 
@@ -8,11 +7,7 @@ function BackButton() {
     navigate(-1) // Go back one page
   }
 
-  return (
-    <button onClick={handleGoBack}>
-      <MdOutlineArrowBackIosNew />
-    </button>
-  )
+  return <button onClick={handleGoBack}>{back}</button>
 }
 
 export default BackButton
