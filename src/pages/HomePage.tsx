@@ -1,8 +1,8 @@
-import Drawer from '../components/Drawer'
+import MainLayout from '../components/MainLayout'
 
 const HomePage = () => (
   <>
-    <Drawer />
+    <MainLayout />
   </>
 )
 
