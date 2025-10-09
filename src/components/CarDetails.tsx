@@ -2,29 +2,29 @@ import CarIcon from '../assets/CarIcon'
 import FuelIcon from '../assets/FuelIcon'
 import HorseIcon from '../assets/HorseIcon'
 import ProfileIcon from '../assets/ProfileIcon'
-import danger from '../assets/dangerIcon.png'
-import plateNumber from '../assets/plateNumberIcon.png'
-import yellowCar from '../assets/yellowCar.png'
+import alert from '../assets/Alert.svg'
+import plateNumber from '../assets/LicensePlate.svg'
+import yellowCar from '../assets/YellowCar.svg'
 
 interface CarDetailsProps {
-  carName?: string
-  owner?: string
-  model?: string
-  plate?: string
-  horsepower?: string
-  fuelType?: string
-  restriction?: string
-  image?: string
+  carName: string
+  owner: string
+  model: string
+  plate: string
+  horsepower: string
+  fuelType: string
+  restriction: string
+  image: string
 }
 
 const CarDetails = ({
-  carName = 'Tini Titan',
-  owner = 'Anna',
-  model = 'Countryman',
-  plate = 'M-LK-3456',
-  horsepower = '122hp',
-  fuelType = 'Petrol',
-  restriction = 'No Smoking',
+  carName,
+  owner,
+  model,
+  plate,
+  horsepower,
+  fuelType,
+  restriction,
   image = yellowCar,
 }: CarDetailsProps) => (
   <div>
@@ -60,7 +60,7 @@ const CarDetails = ({
       </div>
 
       <div className="flex gap-2 items-center">
-        <img src={danger} alt="Restriction icon" />
+        <img src={alert} alt="Restriction icon" />
         <span className="font-bold">{restriction}</span>
       </div>
     </div>

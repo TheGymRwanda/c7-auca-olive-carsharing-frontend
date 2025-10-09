@@ -1,5 +1,5 @@
 import CarDetails from '../components/CarDetails'
-import yellowCar from '../assets/yellowCar.png'
+import yellowCar from '../assets/YellowCar.svg'
 
 const CarDetailsPage = () => {
   const carProps = {
