@@ -5,7 +5,7 @@ import MenuBar from '../components/MenuBar'
 const HomePage = () => (
   <>
     <MenuBar />
-    <main className="mt-16">
+    <main className="mt-16 flex flex-col justify-center items-center">
       <MoniShareTitle />
       <p className="text-center text-white mt-10 font-normal text-lg">
         Hello Manuela!
