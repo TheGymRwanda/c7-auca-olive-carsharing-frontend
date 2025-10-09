@@ -1,6 +1,7 @@
 import { ReactElement } from 'react'
 import { configure } from 'axios-hooks'
 import { AppRoutes } from './routes'
+
 configure({
   defaultOptions: {
     autoCancel: false,
@@ -8,11 +9,7 @@ configure({
 })
 
 function App(): ReactElement {
-  return (
-    <>
-      <AppRoutes />
-    </>
-  )
+  return <AppRoutes />
 }
 
 export default App

@@ -7,7 +7,7 @@ export function AppRoutes(): ReactElement {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path='/allcars' element={<AllCars />} />
+      <Route path="/allcars" element={<AllCars />} />
     </Routes>
   )
 }
