@@ -8,12 +8,12 @@ import List from '../assets/List.svg'
 const Drawer = () => (
   <div className="ml-4 mt-8 flex h-80 w-52 flex-1 flex-col items-center justify-center rounded-lg bg-[#3e7591] ">
     <div className="mt-4 flex h-full w-full flex-col space-y-3  rounded-t-lg bg-[#3e7591] pl-8 text-white">
-      <div className="flex flex-row space-x-4">
+      <div className="flex flex-row space-x-4 hover:bg-white hover:bg-opacity-20">
         <CarIcon />
         <p>Book A Car</p>
       </div>
-      <div className="flex flex-row space-x-4">
-        <img src={Stairs} className="" />
+      <div className="flex flex-row space-x-4 hover:bg-white hover:bg-opacity-20">
+        <img src={Stairs} />
         <p>My Bookings</p>
       </div>
     </div>
@@ -21,15 +21,15 @@ const Drawer = () => (
       <div className="border-b border-gray-300"></div>
     </div>
     <div className="mb-3 mt-4 flex h-full w-full flex-col space-y-3 bg-[#3e7591] pl-8 text-white ">
-      <div className="flex flex-row space-x-4">
+      <div className="flex flex-row space-x-4 hover:bg-white hover:bg-opacity-20">
         <img src={CarsM} />
         <p>See My Cars</p>
       </div>
-      <div className="flex flex-row space-x-4">
+      <div className="flex flex-row space-x-4 hover:bg-white hover:bg-opacity-20">
         <img src={List} />
         <p className="ml-4">My Car&apos;s Bookings</p>
       </div>
-      <div className="flex flex-row space-x-4">
+      <div className="flex flex-row space-x-4 hover:bg-white hover:bg-opacity-20">
         <CarPlusIcon />
         <p>Add New Car</p>
       </div>
@@ -38,7 +38,7 @@ const Drawer = () => (
       <div className="border-b border-gray-300"></div>
     </div>
     <div className="mt-4 flex h-44 w-full flex-col space-y-3 rounded-b-lg bg-[#3e7591]  pl-8 text-white">
-      <div className="flex flex-row space-x-4">
+      <div className="flex flex-row space-x-4 hover:bg-white hover:bg-opacity-20">
         <img src={Logout} />
         <p>Log Out</p>
       </div>
