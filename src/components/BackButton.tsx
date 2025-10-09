@@ -9,7 +9,7 @@ function BackButton() {
 
   return (
     <button onClick={handleGoBack}>
-      <ChevronBackIcon />
+      <ChevronBackIcon className="text-black mx-auto" />
     </button>
   )
 }
