@@ -5,7 +5,7 @@ import logout from '../assets/logout.png'
 import stairs from '../assets/stairs.png'
 
 const Drawer = () => (
-  <div className="ml-16 mt-16 flex h-80 w-72 flex-1 flex-col items-center justify-center rounded-lg bg-[#3e7591] ">
+  <div className="ml-6 mt-8 flex h-80 w-72 flex-1 flex-col items-center justify-center rounded-lg bg-[#3e7591] ">
     <div className="mt-4 flex h-full w-full flex-col space-y-3 rounded-t-lg bg-[#3e7591] pl-20 text-white">
       <div className="flex flex-row space-x-4">
         <CarIcon />
