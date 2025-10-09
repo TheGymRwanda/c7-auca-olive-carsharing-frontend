@@ -1,10 +1,10 @@
 import MoniShareTitle from '../components/MoniShareTitle'
-import MenuBar from '../components/MenuBar'
+// import MenuBar from '../components/MenuBar'
 
 const HomePage = () => (
   <>
-    <MenuBar />
-    <main className="">
+    {/* <MenuBar /> */}
+    <main className="mt-10">
       <MoniShareTitle />
       <p className="text-center text-white mt-10 font-medium text-lg">
         Hello Manuela!
