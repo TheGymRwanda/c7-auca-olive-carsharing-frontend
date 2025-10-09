@@ -19,10 +19,7 @@ const Error: FC = () => {
           <p className="font-normal">We will solve your issue soon.</p>
         </div>
       </div>
-      <Button
-        onClick={() => navigate('/')}
-        className="mt-6 w-[90%] max-w-sm rounded-2xl bg-white text-[#265e78] text-lg mb-8 "
-      >
+      <Button onClick={() => navigate('/')} className="mt-6 w-[90%] max-w-sm text-[#265e78] mb-20">
         Go back
       </Button>
     </>
