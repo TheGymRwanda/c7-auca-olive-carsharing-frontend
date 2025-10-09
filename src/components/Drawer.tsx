@@ -6,7 +6,7 @@ import Stairs from '../assets/Stairs.svg'
 import List from '../assets/List.svg'
 
 const Drawer = () => (
-  <div className="ml-4 mt-8 flex h-80 w-52 flex-1 flex-col items-center justify-center rounded-lg bg-[#3e7591] ">
+  <div className="ml-4 mt-6 flex h-80 w-52 flex-1 flex-col items-center justify-center rounded-lg bg-[#3e7591] ">
     <div className="mt-4 flex h-full w-full flex-col space-y-3  rounded-t-lg bg-[#3e7591] pl-8 text-white">
       <div className="flex flex-row space-x-4 hover:bg-white hover:bg-opacity-20">
         <CarIcon />
