@@ -16,6 +16,9 @@ module.exports = {
           dark: '#d1d1d1',
         },
       },
+      letterSpacing: {
+        tight: '-0.05em', // Adjust letter spacing to mimic the tight kerning in the first image
+      },
     },
   },
   plugins: [],
