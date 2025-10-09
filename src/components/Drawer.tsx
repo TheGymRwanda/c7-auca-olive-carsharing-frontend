@@ -6,8 +6,8 @@ import Stairs from '../assets/Stairs.svg'
 import List from '../assets/List.svg'
 
 const Drawer = () => (
-  <div className="ml-6 mt-8 flex h-80 w-64 flex-1 flex-col items-center justify-center rounded-lg bg-[#3e7591] ">
-    <div className="mt-4 flex h-full w-full flex-col space-y-3  rounded-t-lg bg-[#3e7591] pl-16 text-white">
+  <div className="ml-4 mt-8 flex h-80 w-52 flex-1 flex-col items-center justify-center rounded-lg bg-[#3e7591] ">
+    <div className="mt-4 flex h-full w-full flex-col space-y-3  rounded-t-lg bg-[#3e7591] pl-8 text-white">
       <div className="flex flex-row space-x-4">
         <CarIcon />
         <p>Book A Car</p>
@@ -20,7 +20,7 @@ const Drawer = () => (
     <div className="w-full bg-[#3e7591] px-4">
       <div className="border-b border-gray-300"></div>
     </div>
-    <div className="mb-3 mt-4 flex h-full w-full flex-col space-y-3 bg-[#3e7591] pl-16 text-white ">
+    <div className="mb-3 mt-4 flex h-full w-full flex-col space-y-3 bg-[#3e7591] pl-8 text-white ">
       <div className="flex flex-row space-x-4">
         <img src={CarsM} />
         <p>See My Cars</p>
@@ -37,7 +37,7 @@ const Drawer = () => (
     <div className="w-full bg-[#3e7591]  px-4">
       <div className="border-b border-gray-300"></div>
     </div>
-    <div className="mt-4 flex h-full w-full flex-col space-y-3 rounded-b-lg bg-[#3e7591]  pl-16 text-white">
+    <div className="mt-4 flex h-44 w-full flex-col space-y-3 rounded-b-lg bg-[#3e7591]  pl-8 text-white">
       <div className="flex flex-row space-x-4">
         <img src={Logout} />
         <p>Log Out</p>
