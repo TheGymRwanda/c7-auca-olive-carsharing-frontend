@@ -5,17 +5,17 @@ import MenuBar from '../components/MenuBar'
 const HomePage = () => (
   <>
     <MenuBar />
-    <main className="mt-16 flex flex-col justify-center items-center">
+    <main className="mt-16 flex flex-col items-center justify-center">
       <MoniShareTitle />
-      <p className="text-center text-white mt-10 font-normal text-lg">
+      <p className="mt-10 text-center text-lg font-normal text-white">
         Hello Manuela!
         <br /> What are you up to today?
       </p>
-      <div className="flex flex-col items-center w-full max-w-md space-y-4 mt-14 px-4">
+      <div className="mt-14 flex w-full max-w-md flex-col items-center space-y-4 px-4">
         <Button variant="primary" size="md" fullWidth>
           Book Car
         </Button>
-        <p className="text-white font-normal text-lg py-5">or</p>
+        <p className="py-5 text-lg font-normal text-white">or</p>
         <Button variant="outlineWhite" size="md" fullWidth>
           See My Cars
         </Button>

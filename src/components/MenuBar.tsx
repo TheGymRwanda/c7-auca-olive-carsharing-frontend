@@ -8,7 +8,7 @@ function MenuBar() {
         Menu
       </div>
 
-      <div className="absolute -bottom-4 left-1/2 flex h-20 w-20 -translate-x-1/2 items-center justify-center rounded-full bg-[#111827] text-white">
+      <div className="absolute left-1/2 top-0 flex h-20 w-20 -translate-x-1/2 items-center justify-center rounded-full bg-[#111827] text-white">
         <img src={lgHeader} alt="Header Logo" className="h-12 w-12" />
       </div>
 
