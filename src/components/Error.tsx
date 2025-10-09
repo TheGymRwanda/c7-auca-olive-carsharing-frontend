@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { useNavigate } from 'react-router-dom'
-import unionImage from './../assets/Union.png'
+import errorImg from './../assets/404.svg'
 
 const Error: FC = () => {
   const navigate = useNavigate()
@@ -8,7 +8,7 @@ const Error: FC = () => {
   return (
     <div className="p-8 text-center text-white" style={{ fontFamily: "'Playfair Display', serif" }}>
       <h1 className="mb-8 text-5xl font-bold">OOOOOPS!</h1>
-      <img src={unionImage} alt="Smoking car image" className="mx-auto" />
+      <img src={errorImg} alt="Smoking car image" className="mx-auto" />
       <div className="p-4 text-center text-xl">
         <p className="mt-4 font-normal">Something went wrong.</p>
         <p className="font-normal">We will solve your issue soon.</p>
