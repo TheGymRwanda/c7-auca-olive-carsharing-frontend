@@ -1,10 +1,13 @@
 import Error from '../components/Error'
+import MenuBar from '../components/MenuBar'
 
 const ErrorPage = () => (
-  <div>
-    <section className="mx-auto flex min-h-screen flex-col items-center justify-between gap-8 bg-[#265e78] py-10">
+  <>
+    {/* <MenuBar /> */}
+    <div className="flex min-h-screen flex-col items-center justify-center bg-[#265e78]">
       <Error />
-    </section>
-  </div>
+    </div>
+  </>
 )
+
 export default ErrorPage
