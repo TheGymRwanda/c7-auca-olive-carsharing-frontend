@@ -1,7 +1,7 @@
+import BackButton from '../components/BackButton'
 import CarCard from '../components/CarCard'
 import MainLayout from '../components/MainLayout'
 import { useCars, useCarTypes, useUsers } from '../hooks'
-
 export default function AllCars() {
   const [{ data: cars, loading: carLoading, error: carError }] = useCars()
   const [{ data: users, loading: userLoading, error: userError }] = useUsers()
@@ -37,8 +37,11 @@ export default function AllCars() {
   return (
     <div className="min-h-screen bg-[#265E78]">
       <MainLayout>
-        <div className="flex items-center justify-center px-7">
-          <h1 className="mt-8 font-lora text-3xl font-medium text-white">ALL CARS</h1>
+        <div className="flex mt-8 w-full items-center justify-center px-5">
+          <div className='flex-none'>
+          <BackButton />
+          </div>
+          <h1 className="font-lora flex-1 text-center text-3xl font-medium text-white">ALL CARS</h1>
         </div>
         {cars.map(car => {
           // Find the owner for this car
@@ -49,6 +52,7 @@ export default function AllCars() {
           return (
             <CarCard
               key={car.id}
+              carId={car.id}
               carName={car.name}
               carOwner={owner?.name}
               carType={carType?.name}

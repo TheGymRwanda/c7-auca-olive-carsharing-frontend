@@ -28,7 +28,7 @@ const CarDetails = ({
   image = yellowCar,
 }: CarDetailsProps) => (
   <div>
-    <img src={image} className="h-[198px] w-[356px]" alt={carName} />
+    <img src={image} className="w-full max-w-[356px] h-auto object-contain" alt={carName} />
     <div className="flex flex-col gap-2 pl-6 pt-2">
       <h3 className="mb-8 mt-16 text-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>
         {carName}

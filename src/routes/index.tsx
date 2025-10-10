@@ -21,7 +21,7 @@ export function AppRoutes(): ReactElement {
       <Route path="/my-bookings" element={<MyBookings />} />
       <Route path="/book-car" element={<AllCars />} />
       <Route path="/own-rented" element={<OwnRented />} />
-      <Route path="/car-details" element={<CarDetailsPage />} />
+      <Route path="/car-details/:id" element={<CarDetailsPage />} />
       <Route path="*" element={<ErrorPage />} />
     </Routes>
   )
