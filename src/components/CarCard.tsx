@@ -10,7 +10,7 @@ interface carCards {
 export default function CarCard({
   carName = 'Mighty Mouse',
   carOwner = 'Manuela',
-  carType = 'Moni Cooper',
+  carType = 'Moni Cooper ',
   carImage,
 }: carCards) {
   return (
