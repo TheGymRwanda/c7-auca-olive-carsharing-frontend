@@ -1,10 +1,9 @@
+import MainLayout from '../components/MainLayout'
 import Button from '../components/Button'
 import MoniShareTitle from '../components/MoniShareTitle'
-import MenuBar from '../components/MenuBar'
 
 const HomePage = () => (
-  <>
-    <MenuBar />
+  <MainLayout>
     <main className="mt-16 flex flex-col items-center justify-center">
       <MoniShareTitle />
       <p className="mt-10 text-center text-lg font-normal text-white">
@@ -24,7 +23,7 @@ const HomePage = () => (
         </Button>
       </div>
     </main>
-  </>
+  </MainLayout>
 )
 
 export default HomePage
