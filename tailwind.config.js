@@ -2,7 +2,11 @@
 module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {
+     extend: {
+      fontFamily: {
+        lora: ['Lora', 'serif'],
+        inter: ['Inter', 'sans-serif'],
+      },
       colors: {
         primary: {
           light: '#3E7591',
@@ -12,6 +16,9 @@ module.exports = {
           light: '#B8B8B8',
           dark: '#d1d1d1',
         },
+      },
+      letterSpacing: {
+        tight: '-0.05em', // Adjust letter spacing to mimic the tight kerning in the first image
       },
     },
   },

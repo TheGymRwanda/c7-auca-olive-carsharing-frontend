@@ -1,8 +1,13 @@
-import { useState } from 'react'
+// In MainLayout.tsx - update it to accept children
+import { useState, ReactNode } from 'react'
 import MenuBar from './MenuBar'
 import Drawer from './Drawer'
 
-function MainLayout() {
+interface MainLayoutProps {
+  children?: ReactNode
+}
+
+function MainLayout({ children }: MainLayoutProps) {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false)
 
   const toggleDrawer = () => {
@@ -10,7 +15,7 @@ function MainLayout() {
   }
 
   return (
-    <div className="relative h-screen w-full bg-gray-100">
+    <div className="relative h-screen w-full">
       <MenuBar isDrawerOpen={isDrawerOpen} toggleDrawer={toggleDrawer} />
 
       {isDrawerOpen && (
@@ -18,6 +23,9 @@ function MainLayout() {
           <Drawer />
         </div>
       )}
+
+      {/* Add this line to render children */}
+      {children}
     </div>
   )
 }

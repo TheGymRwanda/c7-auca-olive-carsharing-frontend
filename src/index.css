@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,4 +8,5 @@
 
 body {
   @apply font-normal text-left text-sm relative text-gray-700;
+  background-color: #265e78;
 }
