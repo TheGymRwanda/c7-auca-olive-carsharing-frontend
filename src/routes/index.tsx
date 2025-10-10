@@ -5,9 +5,11 @@ import AllCars from '../pages/AllCars'
 import AddCar from '../pages/AddCar'
 import MyCars from '../pages/MyCars'
 import ErrorPage from '../pages/ErrorPage'
+//will put in this page after confirmation from the coach
 // import BookCar from '../pages/BookCar'
 import MyBookings from '../pages/MyBookings'
 import OwnRented from '../pages/OwnRented'
+import CarDetailsPage from '../pages/CarDetailsPage'
 
 export function AppRoutes(): ReactElement {
   return (
@@ -19,6 +21,7 @@ export function AppRoutes(): ReactElement {
       <Route path="/my-bookings" element={<MyBookings />} />
       <Route path="/book-car" element={<AllCars />} />
       <Route path="/own-rented" element={<OwnRented />} />
+      <Route path="/car-details" element={<CarDetailsPage />} />
       <Route path="*" element={<ErrorPage />} />
     </Routes>
   )

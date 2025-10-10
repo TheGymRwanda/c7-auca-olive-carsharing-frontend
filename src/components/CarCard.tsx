@@ -1,5 +1,6 @@
 import ProfileIcon from '../assets/ProfileIcon'
 import CarIcon from '../assets/CarIcon'
+import { Link } from 'react-router-dom'
 interface carCards {
   carName?: string
   carOwner?: string
@@ -28,7 +29,12 @@ export default function CarCard({
             <CarIcon />
             <p className="text-[14px]">{carType}</p>
           </div>
-          <a className="mt-3 font-inter text-[14px] font-semibold text-[#EBF3AB]">Show details</a>
+          <Link
+            to={`/car-details`}
+            className="mt-3 font-inter text-[14px] font-semibold text-[#EBF3AB]"
+          >
+            Show details
+          </Link>
         </div>
       </div>
     </div>
