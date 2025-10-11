@@ -14,6 +14,9 @@ module.exports = {
           dark: '#265E78',
           DEFAULT: '#447991',
         },
+        accent: {
+          yellow: '#EBF3AB',
+        },
         ghost: {
           light: '#B8B8B8',
           dark: '#d1d1d1',

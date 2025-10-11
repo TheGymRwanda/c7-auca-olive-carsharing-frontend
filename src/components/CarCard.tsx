@@ -18,8 +18,8 @@ export default function CarCard({
   carImage,
 }: CarCardProps) {
   const info = [
-    { icon: <ProfileIcon />, text: carOwner },
-    { icon: <CarIcon />, text: carType },
+    { id: 'owner', icon: <ProfileIcon />, text: carOwner },
+    { id: 'type', icon: <CarIcon />, text: carType },
   ]
 
   return (
@@ -33,8 +33,8 @@ export default function CarCard({
           <div className="flex flex-col gap-3 text-white">
             <p className="text-[25px] mb-2 font-playfair">{carName}</p>
 
-            {info.map((item, index) => (
-              <div key={index} className="flex items-center gap-2">
+            {info.map(item => (
+              <div key={item.id} className="flex items-center gap-2">
                 {item.icon}
                 <p>{item.text}</p>
               </div>
@@ -42,7 +42,7 @@ export default function CarCard({
 
             <Link
               to={`/car-details/${carId}`}
-              className="mt-3 font-inter text-[14px] font-semibold text-[#EBF3AB]"
+              className="mt-3 font-inter text-[14px] font-semibold text-accent-yellow"
             >
               Show details
             </Link>
