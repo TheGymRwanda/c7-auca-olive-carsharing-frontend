@@ -37,11 +37,11 @@ export default function AllCars() {
   return (
     <div className="min-h-screen bg-[#265E78]">
       <MainLayout>
-        <div className="flex mt-8 w-full items-center justify-center px-5">
-          <div className='flex-none'>
-          <BackButton />
+        <div className="mt-8 flex w-full items-center justify-center px-5">
+          <div className="flex-none">
+            <BackButton />
           </div>
-          <h1 className="font-lora flex-1 text-center text-3xl font-medium text-white">ALL CARS</h1>
+          <h1 className="flex-1 text-center font-lora text-3xl font-medium text-white">ALL CARS</h1>
         </div>
         {cars.map(car => {
           // Find the owner for this car

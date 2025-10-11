@@ -9,8 +9,8 @@ const CarDetailsPage = () => {
   const { id } = useParams()
   useEffect(() => {
     window.scrollTo(0, 0)
-  }, [id]) 
-  
+  }, [id])
+
   const [{ data: cars, loading: carLoading, error: carError }] = useCars()
   const [{ data: users, loading: userLoading, error: userError }] = useUsers()
   const [{ data: carTypes, loading: carTypeLoading, error: carTypeError }] = useCarTypes()
@@ -45,15 +45,15 @@ const CarDetailsPage = () => {
     )
   }
   // Show not found state
-if (!car) {
-  return (
-    <MainLayout>
-      <section className="mx-auto flex min-h-screen flex-col items-center justify-center gap-8 bg-[#265e78] py-10 text-white">
-        <p className="text-xl text-white">Car not found</p>
-      </section>
-    </MainLayout>
-  )
-}
+  if (!car) {
+    return (
+      <MainLayout>
+        <section className="mx-auto flex min-h-screen flex-col items-center justify-center gap-8 bg-[#265e78] py-10 text-white">
+          <p className="text-xl text-white">Car not found</p>
+        </section>
+      </MainLayout>
+    )
+  }
   // Map API data to CarDetails props
   const carProps = {
     carName: car.name,
@@ -73,7 +73,7 @@ if (!car) {
           <div className="flex-none">
             <BackButton />
           </div>
-          <h1 className="font-lora flex-1 mr-10 text-center text-3xl font-medium text-white">
+          <h1 className="mr-10 flex-1 text-center font-lora text-3xl font-medium text-white">
             DETAILS
           </h1>
         </div>
