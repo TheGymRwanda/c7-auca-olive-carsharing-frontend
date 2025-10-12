@@ -30,7 +30,7 @@ const CarDetails = ({
   <div>
     <img src={image} className="h-auto w-full max-w-[356px] object-contain" alt={carName} />
     <div className="flex flex-col gap-2 pl-6 pt-2">
-      <h3 className="mb-8 mt-16 text-2xl font-playfair">{carName}</h3>
+      <h3 className="mb-8 mt-16 font-playfair text-2xl">{carName}</h3>
 
       <div className="flex items-center gap-3">
         <ProfileIcon />
