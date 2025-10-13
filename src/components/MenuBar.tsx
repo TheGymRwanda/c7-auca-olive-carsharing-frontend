@@ -9,7 +9,7 @@ function MenuBar() {
       </div>
 
       <div className="absolute -bottom-4 left-1/2 flex h-20 w-20 -translate-x-1/2 items-center justify-center rounded-full bg-[#111827] text-white">
-        <img src={lgHeader} alt="Header Logo" className="h-12 w-12" />
+        <img src={lgHeader} alt="Header logo" className="h-12 w-12" />
       </div>
 
       <div className="mr-6 flex h-16 w-4 flex-1 items-center justify-end text-xl text-white">
