@@ -28,38 +28,36 @@ const CarDetails = ({
   image = yellowCar,
 }: CarDetailsProps) => (
   <div>
-    <img src={image} className="w-[356px] h-[198px]" alt={carName} />
-    <div className="pl-6 pt-2 flex flex-col gap-2">
-      <h3 className="mt-16 mb-8 text-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>
-        {carName}
-      </h3>
+    <img src={image} className="h-auto w-full max-w-[356px] object-contain" alt={carName} />
+    <div className="flex flex-col gap-2 pl-6 pt-2">
+      <h3 className="font-playfair mb-8 mt-16 text-2xl">{carName}</h3>
 
-      <div className="flex gap-3 items-center">
+      <div className="flex items-center gap-3">
         <ProfileIcon />
         <span>{owner}</span>
       </div>
 
-      <div className="flex gap-2 items-center">
+      <div className="flex items-center gap-2">
         <CarIcon />
         <span>{model}</span>
       </div>
 
-      <div className="flex gap-2 items-center">
+      <div className="flex items-center gap-2">
         <img src={plateNumber} alt="Plate number icon" />
         <span>{plate}</span>
       </div>
 
-      <div className="flex gap-2 items-center">
+      <div className="flex items-center gap-2">
         <HorseIcon />
         <span>{horsepower}</span>
       </div>
 
-      <div className="flex gap-2 items-center">
+      <div className="flex items-center gap-2">
         <FuelIcon />
         <span>{fuelType}</span>
       </div>
 
-      <div className="flex gap-2 items-center">
+      <div className="flex items-center gap-2">
         <img src={alert} alt="Restriction icon" />
         <span className="font-bold">{restriction}</span>
       </div>

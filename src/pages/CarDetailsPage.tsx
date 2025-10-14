@@ -14,7 +14,7 @@ const CarDetailsPage = () => {
   }
 
   return (
-    <section className="mx-auto flex min-h-screen justify-center items-center flex-col gap-8 py-10 bg-[#265e78] text-white">
+    <section className="mx-auto flex min-h-screen flex-col items-center justify-center gap-8 bg-[#265e78] py-10 text-white">
       <h1 className="text-3xl" style={{ fontFamily: "'Playfair Display', serif" }}>
         DETAILS
       </h1>

@@ -14,7 +14,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 }
 
 const Spinner = () => (
-  <svg className="-ml-1 mr-2 size-4 animate-spin" fill="none" viewBox="0 0 24 24">
+  <svg className="size-4 -ml-1 mr-2 animate-spin" fill="none" viewBox="0 0 24 24">
     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
     <path
       className="opacity-75"
