@@ -9,7 +9,7 @@ const Error: FC = () => {
   return (
     <>
       <div
-        className="p-8 mt-8 text-center text-white"
+        className="mt-8 p-8 text-center text-white"
         style={{ fontFamily: "'Playfair Display', serif" }}
       >
         <h1 className="mb-8 text-5xl font-bold">OOOOOPS!</h1>
@@ -19,7 +19,7 @@ const Error: FC = () => {
           <p className="font-normal">We will solve your issue soon.</p>
         </div>
       </div>
-      <Button onClick={() => navigate('/')} className="mt-6 w-[90%] max-w-sm text-[#265e78] mb-20">
+      <Button onClick={() => navigate('/')} className="mb-20 mt-6 w-[90%] max-w-sm text-[#265e78]">
         Go back
       </Button>
     </>

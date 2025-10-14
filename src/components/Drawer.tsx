@@ -17,7 +17,7 @@ const Drawer = () => (
         <p>My Bookings</p>
       </div>
     </div>
-    <div className="w-full bg-[#3e7591] px-4 mt-2">
+    <div className="mt-2 w-full bg-[#3e7591] px-4">
       <div className="border-b border-gray-300"></div>
     </div>
     <div className="mb-3 mt-4 flex h-44 w-full flex-col space-y-3 bg-[#3e7591] pl-8 text-white ">
