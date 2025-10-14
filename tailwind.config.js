@@ -12,6 +12,8 @@ module.exports = {
         primary: {
           light: '#3E7591',
           dark: '#265E78',
+          darkBlue: '#111827',
+          borderBlue: '#0f172a',
           DEFAULT: '#447991',
         },
         accent: {
