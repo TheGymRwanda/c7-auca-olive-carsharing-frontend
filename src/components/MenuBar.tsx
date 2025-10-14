@@ -18,7 +18,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ isDrawerOpen, toggleDrawer }) => (
 
     <Link
       to="/"
-      className="absolute -bottom-3 left-1/2 flex h-20 w-20 -translate-x-1/2 items-center justify-center rounded-full border-[3px] border-[#0f172a] bg-primary-darkBlue shadow-md"
+      className="absolute -bottom-3 left-1/2 flex h-20 w-20 -translate-x-1/2 items-center justify-center rounded-full border-[3px] border-primary-borderBlue bg-primary-darkBlue shadow-md"
     >
       <img src={Ecocar} alt="Logo" className="h-12 w-16" />
     </Link>
