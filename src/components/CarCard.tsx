@@ -1,7 +1,7 @@
 import ProfileIcon from '../assets/ProfileIcon'
 import CarIcon from '../assets/CarIcon'
 import { Link } from 'react-router-dom'
-
+import YellowCar from '../assets/YellowCar.svg'
 interface CarCardProps {
   carId: number
   carName: string
@@ -15,7 +15,7 @@ export default function CarCard({
   carName = 'Mighty Mouse',
   carOwner = 'Manuela',
   carType = 'Moni Cooper',
-  carImage,
+  carImage = YellowCar,
 }: CarCardProps) {
   const info = [
     { id: 'owner', icon: <ProfileIcon />, text: carOwner },

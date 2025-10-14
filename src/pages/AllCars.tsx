@@ -44,9 +44,7 @@ export default function AllCars() {
           <h1 className="flex-1 text-center font-lora text-3xl font-medium text-white">ALL CARS</h1>
         </div>
         {cars.map(car => {
-          // Find the owner for this car
           const owner = users?.find(user => user.id === car.ownerId)
-          // Find the car type for this car
           const carType = carTypes?.find(type => type.id === car.carTypeId)
 
           return (
