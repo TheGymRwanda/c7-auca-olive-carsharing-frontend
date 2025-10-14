@@ -2,14 +2,17 @@ import React from 'react'
 import ProfileIcon from '../assets/ProfileIcon'
 import Ecocar from '../assets/Ecocar.svg'
 import { Link } from 'react-router-dom'
-import {COLORS} from '../constants/colors'
+import { COLORS } from '../constants/colors'
 interface MenuBarProps {
   isDrawerOpen: boolean
   toggleDrawer: () => void
 }
 
 const MenuBar: React.FC<MenuBarProps> = ({ isDrawerOpen, toggleDrawer }) => (
-  <div className="relative flex h-16 w-full items-center justify-between rounded-b-2xl  px-6 text-white shadow-lg" style={{backgroundColor:COLORS.primary}}>
+  <div
+    className="relative flex h-16 w-full items-center justify-between rounded-b-2xl  px-6 text-white shadow-lg"
+    style={{ backgroundColor: COLORS.primary }}
+  >
     <div
       onClick={toggleDrawer}
       className="cursor-pointer text-xl  transition-all duration-200 hover:text-gray-300"
@@ -19,7 +22,8 @@ const MenuBar: React.FC<MenuBarProps> = ({ isDrawerOpen, toggleDrawer }) => (
 
     <Link
       to="/"
-      className="absolute -bottom-3 left-1/2 flex h-20 w-20 -translate-x-1/2 items-center justify-center rounded-full border-[3px] border-[#0f172a] shadow-md" style={{backgroundColor:COLORS.primary}}
+      className="absolute -bottom-3 left-1/2 flex h-20 w-20 -translate-x-1/2 items-center justify-center rounded-full border-[3px] border-[#0f172a] shadow-md"
+      style={{ backgroundColor: COLORS.primary }}
     >
       <img src={Ecocar} alt="Logo" className="h-12 w-16" />
     </Link>
