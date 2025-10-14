@@ -4,12 +4,12 @@ function BackButton() {
   const navigate = useNavigate()
 
   const handleGoBack = () => {
-    navigate(-1) // Go back one page
+    navigate(-1)
   }
 
   return (
     <button onClick={handleGoBack} className="m-5">
-      <ChevronBackIcon className="text-white mx-auto size-5" />
+      <ChevronBackIcon className="size-4 mx-auto text-accent-yellow" />
     </button>
   )
 }
