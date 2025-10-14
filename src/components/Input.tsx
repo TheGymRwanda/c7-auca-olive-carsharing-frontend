@@ -1,11 +1,19 @@
-const input = () => (
+import React from 'react'
+
+interface InputProps {
+  label: string
+  placeholder: string
+  value: string
+}
+
+const input: React.FC<InputProps> = ({ label, placeholder, value }) => (
   <div className="mb-4">
-    <label className="text-white text-sm block mb-1">{}</label>
+    <label className="text-white text-left text-sm block mb-1">{label}</label>
     <input
       type="text"
-      value=""
-      placeholder=""
-      className="w-full bg-blue-600/50 border-none rounded-lg p-3 text-white placeholder:text-gray-300"
+      value={value}
+      placeholder={placeholder}
+      className="w-full bg-primary-light border-none rounded-full p-4 text-white placeholder:text-gray-300"
     />
   </div>
 )
