@@ -1,34 +1,52 @@
 import ProfileIcon from '../assets/ProfileIcon'
 import CarIcon from '../assets/CarIcon'
-interface carCards {
-  carName?: string
+import { Link } from 'react-router-dom'
+import YellowCar from '../assets/YellowCar.svg'
+interface CarCardProps {
+  carId: number
+  carName: string
   carOwner?: string
   carType?: string
   carImage?: string
 }
+
 export default function CarCard({
+  carId,
   carName = 'Mighty Mouse',
   carOwner = 'Manuela',
   carType = 'Moni Cooper',
-  carImage,
-}: carCards) {
+  carImage = YellowCar,
+}: CarCardProps) {
+  const info = [
+    { id: 'owner', icon: <ProfileIcon />, text: carOwner },
+    { id: 'type', icon: <CarIcon />, text: carType },
+  ]
+
   return (
-    <div className="m-8 flex flex-col rounded-2xl bg-[#447991] p-5 font-lora ">
-      <div className="grid grid-cols-2 gap-2">
-        <div className="flex flex-col items-center justify-center">
-          <img src={carImage} alt="" />
-        </div>
-        <div className="flex flex-col gap-3 text-white">
-          <p className="text-[20px]">{carName} </p>
-          <div className="flex gap-2">
-            <ProfileIcon />
-            <p className="text-[14px]">{carOwner}</p>
+    <div className="flex w-full items-center justify-center px-4">
+      <div className="mt-6 flex h-[200px] w-[340px] flex-col rounded-2xl bg-primary-light p-5 font-lora shadow-md">
+        <div className="grid grid-cols-2 gap-4">
+          <div className="flex items-center justify-center">
+            <img src={carImage} alt={carName} className="h-[150px] w-[200px] object-contain" />
           </div>
-          <div className="flex gap-2">
-            <CarIcon />
-            <p className="text-[14px]">{carType}</p>
+
+          <div className="flex flex-col gap-3 text-white">
+            <p className="font-playfair mb-2 text-[25px]">{carName}</p>
+
+            {info.map(item => (
+              <div key={item.id} className="flex items-center gap-2">
+                {item.icon}
+                <p>{item.text}</p>
+              </div>
+            ))}
+
+            <Link
+              to={`/car-details/${carId}`}
+              className="text-accent-yellow mt-3 font-inter text-[14px] font-semibold"
+            >
+              Show details
+            </Link>
           </div>
-          <a className="mt-3 font-inter text-[14px] font-semibold text-[#EBF3AB]">Show details</a>
         </div>
       </div>
     </div>
