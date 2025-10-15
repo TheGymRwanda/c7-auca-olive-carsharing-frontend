@@ -1,11 +1,7 @@
 import ProfileIcon from '../assets/ProfileIcon'
 import Ecocar from '../assets/Ecocar.svg'
 import { Link } from 'react-router-dom'
-
-interface MenuBarProps {
-  isDrawerOpen: boolean
-  toggleDrawer: () => void
-}
+import { MenuBarProps } from '../util/types'
 
 const MenuBar = ({ isDrawerOpen, toggleDrawer }: MenuBarProps) => (
   <div className="relative flex h-16 w-full items-center justify-between rounded-b-2xl bg-primary-darkblue px-6 text-white shadow-lg">

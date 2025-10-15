@@ -34,3 +34,8 @@ export interface CarCardProps {
 export interface MainLayoutProps {
   children?: ReactNode
 }
+
+export interface MenuBarProps {
+  isDrawerOpen: boolean
+  toggleDrawer: () => void
+}
