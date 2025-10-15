@@ -1,9 +1,9 @@
-import { useParams } from 'react-router-dom'
-import { useEffect } from 'react'
-import CarDetails from '../components/CarDetails'
-import BackButton from '../components/BackButton'
-import MainLayout from '../components/MainLayout'
-import { useCars, useCarTypes, useUsers } from '../hooks'
+import { useParams } from "react-router-dom"
+import { useEffect } from "react"
+import CarDetails from "../components/CarDetails"
+import BackButton from "../components/BackButton"
+import MainLayout from "../components/MainLayout"
+import { useCars, useCarTypes, useUsers } from "../hooks"
 
 const CarDetailsPage = () => {
   const { id } = useParams()
@@ -54,13 +54,13 @@ const CarDetailsPage = () => {
 
   const Car = {
     carName: car.name,
-    owner: owner?.name || 'Unknown Owner',
-    model: carType?.name || 'Unknown Model',
-    plate: car.licensePlate || 'N/A',
+    owner: owner?.name || "Unknown Owner",
+    model: carType?.name || "Unknown Model",
+    plate: car.licensePlate || "N/A",
     horsepower: `${car.horsepower}hp`,
     fuelType: car.fuelType.charAt(0).toUpperCase() + car.fuelType.slice(1),
-    restriction: car.info || 'No restrictions',
-    image: carType?.imageUrl || '',
+    restriction: car.info || "No restrictions",
+    image: carType?.imageUrl || "",
   }
 
   return (

@@ -1,6 +1,6 @@
-import Button from './Button'
-import { useNavigate } from 'react-router-dom'
-import errorImg from './../assets/404.svg'
+import Button from "./Button"
+import { useNavigate } from "react-router-dom"
+import errorImg from "./../assets/404.svg"
 
 const Error = () => {
   const navigate = useNavigate()
@@ -16,7 +16,7 @@ const Error = () => {
         </div>
       </div>
       <Button
-        onClick={() => navigate('/')}
+        onClick={() => navigate("/")}
         className="mb-20 mt-6 w-[90%] max-w-sm text-primary-dark"
       >
         Go back

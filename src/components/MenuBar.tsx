@@ -1,7 +1,7 @@
-import ProfileIcon from '../assets/ProfileIcon'
-import Ecocar from '../assets/Ecocar.svg'
-import { Link } from 'react-router-dom'
-import { MenuBarProps } from '../util/types'
+import ProfileIcon from "../assets/ProfileIcon"
+import Ecocar from "../assets/Ecocar.svg"
+import { Link } from "react-router-dom"
+import { MenuBarProps } from "../util/types"
 
 const MenuBar = ({ isDrawerOpen, toggleDrawer }: MenuBarProps) => (
   <div className="relative flex h-16 w-full items-center justify-between rounded-b-2xl bg-primary-darkblue px-6 text-white shadow-lg">
@@ -9,7 +9,7 @@ const MenuBar = ({ isDrawerOpen, toggleDrawer }: MenuBarProps) => (
       onClick={toggleDrawer}
       className="cursor-pointer text-xl transition-all duration-200 hover:text-gray-300"
     >
-      {isDrawerOpen ? 'Close' : 'Menu'}
+      {isDrawerOpen ? "Close" : "Menu"}
     </div>
 
     <Link

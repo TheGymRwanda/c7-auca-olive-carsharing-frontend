@@ -1,10 +1,10 @@
-import CarsM from '../assets/CarsM.svg'
-import CarIcon from '../assets/CarIcon'
-import CarPlusIcon from '../assets/CarPlusIcon'
-import Logout from '../assets/LogOut.svg'
-import Stairs from '../assets/Stairs.svg'
-import List from '../assets/List.svg'
-import { Link } from 'react-router-dom'
+import CarsM from "../assets/CarsM.svg"
+import CarIcon from "../assets/CarIcon"
+import CarPlusIcon from "../assets/CarPlusIcon"
+import Logout from "../assets/LogOut.svg"
+import Stairs from "../assets/Stairs.svg"
+import List from "../assets/List.svg"
+import { Link } from "react-router-dom"
 
 const Drawer = () => (
   <div className="ml-4 mt-6 flex h-72 w-52 flex-col items-center justify-center rounded-lg bg-primary-light">

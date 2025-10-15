@@ -1,7 +1,7 @@
-import React, { ReactNode } from 'react'
+import React, { ReactNode } from "react"
 
-export type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'outlineWhite' | 'outlineIndigo'
-export type ButtonSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+export type ButtonVariant = "primary" | "secondary" | "ghost" | "outlineWhite" | "outlineIndigo"
+export type ButtonSize = "xs" | "sm" | "md" | "lg" | "xl"
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant
