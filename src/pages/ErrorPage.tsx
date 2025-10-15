@@ -1,5 +1,5 @@
-import Error from '../components/Error'
-import MainLayout from '../components/MainLayout'
+import Error from "../components/Error"
+import MainLayout from "../components/MainLayout"
 
 const ErrorPage = () => (
   <MainLayout>

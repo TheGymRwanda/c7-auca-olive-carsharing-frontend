@@ -1,7 +1,7 @@
-import BackButton from '../components/BackButton'
-import CarCard from '../components/CarCard'
-import MainLayout from '../components/MainLayout'
-import { useCars, useCarTypes, useUsers } from '../hooks'
+import BackButton from "../components/BackButton"
+import CarCard from "../components/CarCard"
+import MainLayout from "../components/MainLayout"
+import { useCars, useCarTypes, useUsers } from "../hooks"
 const AllCars = () => {
   const [{ data: cars, loading: carLoading, error: carError }] = useCars()
   const [{ data: users, loading: userLoading, error: userError }] = useUsers()

@@ -1,6 +1,6 @@
-import React from 'react'
-import classNames from 'classnames'
-import type { ButtonProps, ButtonVariant, ButtonSize } from '../util/types'
+import React from "react"
+import classNames from "classnames"
+import type { ButtonProps, ButtonVariant, ButtonSize } from "../util/types"
 
 const Spinner = () => (
   <svg className="size-4 -ml-1 mr-2 animate-spin" fill="none" viewBox="0 0 24 24">
@@ -17,43 +17,43 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
       children,
-      variant = 'primary',
-      size = 'md',
+      variant = "primary",
+      size = "md",
       disabled = false,
       fullWidth = false,
       icon = null,
       loading = false,
-      className = '',
+      className = "",
       ...props
     },
     ref,
   ) => {
     const baseClasses =
-      'inline-flex items-center justify-center font-medium rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed'
+      "inline-flex items-center justify-center font-medium rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
 
     const variantClasses: Record<ButtonVariant, string> = {
-      primary: 'bg-white text-primary-dark hover:bg-gray-50 focus:ring-primary-dark',
-      secondary: 'bg-primary-dark text-white hover:bg-primary-light focus:ring-primary-dark',
-      ghost: 'bg-ghost-light text-primary hover:bg-ghost-dark focus:ring-ghost-light',
+      primary: "bg-white text-primary-dark hover:bg-gray-50 focus:ring-primary-dark",
+      secondary: "bg-primary-dark text-white hover:bg-primary-light focus:ring-primary-dark",
+      ghost: "bg-ghost-light text-primary hover:bg-ghost-dark focus:ring-ghost-light",
       outlineWhite:
-        'border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary focus:ring-primary',
+        "border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary focus:ring-primary",
       outlineIndigo:
-        'border-2 border-primary text-primary bg-transparent hover:bg-primary hover:text-white focus:ring-white',
+        "border-2 border-primary text-primary bg-transparent hover:bg-primary hover:text-white focus:ring-white",
     }
 
     const sizeClasses: Record<ButtonSize, string> = {
-      xs: 'h-8 px-3 text-xs',
-      sm: 'h-9 px-4 text-sm',
-      md: 'h-12 px-6 text-base',
-      lg: 'h-14 px-8 text-lg',
-      xl: 'h-16 px-10 text-xl',
+      xs: "h-8 px-3 text-xs",
+      sm: "h-9 px-4 text-sm",
+      md: "h-12 px-6 text-base",
+      lg: "h-14 px-8 text-lg",
+      xl: "h-16 px-10 text-xl",
     }
 
     const buttonClasses = classNames(
       baseClasses,
       variantClasses[variant],
       sizeClasses[size],
-      { 'w-full': fullWidth },
+      { "w-full": fullWidth },
       className,
     )
 
@@ -69,6 +69,6 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   },
 )
 
-Button.displayName = 'Button'
+Button.displayName = "Button"
 
 export default Button

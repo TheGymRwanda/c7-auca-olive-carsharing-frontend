@@ -1,11 +1,11 @@
-import type { CarDetailsProps } from '../util/types'
-import CarIcon from '../assets/CarIcon'
-import FuelIcon from '../assets/FuelIcon'
-import HorseIcon from '../assets/HorseIcon'
-import ProfileIcon from '../assets/ProfileIcon'
-import alert from '../assets/Alert.svg'
-import plateNumber from '../assets/LicensePlate.svg'
-import yellowCar from '../assets/YellowCar.svg'
+import type { CarDetailsProps } from "../util/types"
+import CarIcon from "../assets/CarIcon"
+import FuelIcon from "../assets/FuelIcon"
+import HorseIcon from "../assets/HorseIcon"
+import ProfileIcon from "../assets/ProfileIcon"
+import alert from "../assets/Alert.svg"
+import plateNumber from "../assets/LicensePlate.svg"
+import yellowCar from "../assets/YellowCar.svg"
 
 const CarDetails = ({
   carName,

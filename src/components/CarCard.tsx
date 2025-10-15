@@ -1,19 +1,19 @@
-import ProfileIcon from '../assets/ProfileIcon'
-import CarIcon from '../assets/CarIcon'
-import { Link } from 'react-router-dom'
-import YellowCar from '../assets/YellowCar.svg'
-import type { CarCardProps } from '../util/types'
+import ProfileIcon from "../assets/ProfileIcon"
+import CarIcon from "../assets/CarIcon"
+import { Link } from "react-router-dom"
+import YellowCar from "../assets/YellowCar.svg"
+import type { CarCardProps } from "../util/types"
 
 const CarCard = ({
   carId,
-  carName = 'Mighty Mouse',
-  carOwner = 'Manuela',
-  carType = 'Moni Cooper',
+  carName = "Mighty Mouse",
+  carOwner = "Manuela",
+  carType = "Moni Cooper",
   carImage = YellowCar,
 }: CarCardProps) => {
   const info = [
-    { id: 'owner', icon: <ProfileIcon />, text: carOwner },
-    { id: 'type', icon: <CarIcon />, text: carType },
+    { id: "owner", icon: <ProfileIcon />, text: carOwner },
+    { id: "type", icon: <CarIcon />, text: carType },
   ]
 
   return (

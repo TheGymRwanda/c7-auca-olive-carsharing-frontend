@@ -1,7 +1,7 @@
-import { useState } from 'react'
-import MenuBar from './MenuBar'
-import Drawer from './Drawer'
-import type { MainLayoutProps } from '../util/types'
+import { useState } from "react"
+import MenuBar from "./MenuBar"
+import Drawer from "./Drawer"
+import type { MainLayoutProps } from "../util/types"
 
 const MainLayout = ({ children }: MainLayoutProps) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false)
