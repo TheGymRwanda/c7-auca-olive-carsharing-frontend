@@ -1,17 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-
-export type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'outlineWhite' | 'outlineIndigo'
-export type ButtonSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
-
-export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: ButtonVariant
-  size?: ButtonSize
-  loading?: boolean
-  fullWidth?: boolean
-  icon?: React.ReactNode
-  children: React.ReactNode
-}
+import type { ButtonProps, ButtonVariant, ButtonSize } from '../util/types'
 
 const Spinner = () => (
   <svg className="size-4 -ml-1 mr-2 animate-spin" fill="none" viewBox="0 0 24 24">
@@ -42,7 +31,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const baseClasses =
       'inline-flex items-center justify-center font-medium rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed'
 
-    const variantClasses = {
+    const variantClasses: Record<ButtonVariant, string> = {
       primary: 'bg-white text-primary-dark hover:bg-gray-50 focus:ring-primary-dark',
       secondary: 'bg-primary-dark text-white hover:bg-primary-light focus:ring-primary-dark',
       ghost: 'bg-ghost-light text-primary hover:bg-ghost-dark focus:ring-ghost-light',
@@ -52,7 +41,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         'border-2 border-primary text-primary bg-transparent hover:bg-primary hover:text-white focus:ring-white',
     }
 
-    const sizeClasses = {
+    const sizeClasses: Record<ButtonSize, string> = {
       xs: 'h-8 px-3 text-xs',
       sm: 'h-9 px-4 text-sm',
       md: 'h-12 px-6 text-base',
