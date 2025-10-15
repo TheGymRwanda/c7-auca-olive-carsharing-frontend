@@ -1,9 +1,8 @@
-import { FC } from 'react'
 import Button from './Button'
 import { useNavigate } from 'react-router-dom'
 import errorImg from './../assets/404.svg'
 
-const Error: FC = () => {
+const Error = () => {
   const navigate = useNavigate()
 
   return (
