@@ -10,11 +10,13 @@ import ErrorPage from '../pages/ErrorPage'
 import MyBookings from '../pages/MyBookings'
 import OwnRented from '../pages/OwnRented'
 import CarDetailsPage from '../pages/CarDetailsPage'
+import Login from '../pages/Login'
 
 export function AppRoutes(): ReactElement {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
+      <Route path="/login" element={<Login />} />
       <Route path="/allcars" element={<AllCars />} />
       <Route path="/add-car" element={<AddCar />} />
       <Route path="/my-cars" element={<MyCars />} />
