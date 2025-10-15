@@ -2,13 +2,7 @@ import ProfileIcon from '../assets/ProfileIcon'
 import CarIcon from '../assets/CarIcon'
 import { Link } from 'react-router-dom'
 import YellowCar from '../assets/YellowCar.svg'
-interface CarCardProps {
-  carId: number
-  carName: string
-  carOwner?: string
-  carType?: string
-  carImage?: string
-}
+import type { CarCardProps } from '../util/types'
 
 const CarCard = ({
   carId,

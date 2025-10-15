@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 
 export type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'outlineWhite' | 'outlineIndigo'
 export type ButtonSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
@@ -21,4 +21,16 @@ export interface CarDetailsProps {
   fuelType: string
   restriction: string
   image: string
+}
+
+export interface CarCardProps {
+  carId: number
+  carName: string
+  carOwner?: string
+  carType?: string
+  carImage?: string
+}
+
+export interface MainLayoutProps {
+  children?: ReactNode
 }

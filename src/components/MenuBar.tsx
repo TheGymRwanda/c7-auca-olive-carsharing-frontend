@@ -1,17 +1,17 @@
-import React from 'react'
 import ProfileIcon from '../assets/ProfileIcon'
 import Ecocar from '../assets/Ecocar.svg'
 import { Link } from 'react-router-dom'
+
 interface MenuBarProps {
   isDrawerOpen: boolean
   toggleDrawer: () => void
 }
 
-const MenuBar: React.FC<MenuBarProps> = ({ isDrawerOpen, toggleDrawer }) => (
+const MenuBar = ({ isDrawerOpen, toggleDrawer }: MenuBarProps) => (
   <div className="relative flex h-16 w-full items-center justify-between rounded-b-2xl bg-primary-darkblue px-6 text-white shadow-lg">
     <div
       onClick={toggleDrawer}
-      className="cursor-pointer text-xl  transition-all duration-200 hover:text-gray-300"
+      className="cursor-pointer text-xl transition-all duration-200 hover:text-gray-300"
     >
       {isDrawerOpen ? 'Close' : 'Menu'}
     </div>
@@ -23,9 +23,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ isDrawerOpen, toggleDrawer }) => (
       <img src={Ecocar} alt="Car Logo" className="h-12 w-16" />
     </Link>
 
-    <div>
-      <ProfileIcon className="h-8 w-8" />
-    </div>
+    <ProfileIcon className="h-8 w-8" />
   </div>
 )
 

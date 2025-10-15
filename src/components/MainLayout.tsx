@@ -1,10 +1,8 @@
-import { useState, ReactNode } from 'react'
+import { useState } from 'react'
 import MenuBar from './MenuBar'
 import Drawer from './Drawer'
+import type { MainLayoutProps } from '../util/types'
 
-interface MainLayoutProps {
-  children?: ReactNode
-}
 const MainLayout = ({ children }: MainLayoutProps) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false)
   const toggleDrawer = () => {
