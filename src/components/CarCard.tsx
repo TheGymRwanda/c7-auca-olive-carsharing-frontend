@@ -10,13 +10,13 @@ interface CarCardProps {
   carImage?: string
 }
 
-export default function CarCard({
+const CarCard = ({
   carId,
   carName = 'Mighty Mouse',
   carOwner = 'Manuela',
   carType = 'Moni Cooper',
   carImage = YellowCar,
-}: CarCardProps) {
+}: CarCardProps) => {
   const info = [
     { id: 'owner', icon: <ProfileIcon />, text: carOwner },
     { id: 'type', icon: <CarIcon />, text: carType },
@@ -52,3 +52,5 @@ export default function CarCard({
     </div>
   )
 }
+
+export default CarCard

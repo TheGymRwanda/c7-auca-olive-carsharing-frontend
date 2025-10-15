@@ -8,9 +8,6 @@ configure({
     autoCancel: false,
   },
 })
-
-function App(): ReactElement {
-  return <AppRoutes />
-}
+const App = (): ReactElement => <AppRoutes />
 
 export default App

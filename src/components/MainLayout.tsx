@@ -5,7 +5,7 @@ import Drawer from './Drawer'
 interface MainLayoutProps {
   children?: ReactNode
 }
-function MainLayout({ children }: MainLayoutProps) {
+const MainLayout = ({ children }: MainLayoutProps) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false)
   const toggleDrawer = () => {
     setIsDrawerOpen(!isDrawerOpen)

@@ -2,7 +2,7 @@ import BackButton from '../components/BackButton'
 import CarCard from '../components/CarCard'
 import MainLayout from '../components/MainLayout'
 import { useCars, useCarTypes, useUsers } from '../hooks'
-export default function AllCars() {
+const AllCars = () => {
   const [{ data: cars, loading: carLoading, error: carError }] = useCars()
   const [{ data: users, loading: userLoading, error: userError }] = useUsers()
   const [{ data: carTypes, loading: carTypeLoading, error: carTypeError }] = useCarTypes()
@@ -10,32 +10,31 @@ export default function AllCars() {
   const loading = carLoading || userLoading || carTypeLoading
   const error = carError || userError || carTypeError
 
-  // Show loading state
   if (loading) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-[#265E78]">
+      <div className="flex min-h-screen items-center justify-center bg-primary-dark">
         <p className="text-xl text-white">Loading cars...</p>
       </div>
     )
   }
-  // Show error state
+
   if (error) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-[#265E78]">
+      <div className="flex min-h-screen items-center justify-center bg-primary-dark">
         <p className="text-xl text-red-300">Error loading cars: {error.message}</p>
       </div>
     )
   }
-  // Show empty state
+
   if (!cars || cars.length === 0) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-[#265E78]">
+      <div className="flex min-h-screen items-center justify-center bg-primary-dark">
         <p className="text-xl text-white">No cars available</p>
       </div>
     )
   }
   return (
-    <div className="min-h-screen bg-[#265E78]">
+    <div className="min-h-screen bg-primary-dark">
       <MainLayout>
         <div className="mt-8 flex w-full items-center justify-center px-5">
           <div className="flex-none">
@@ -62,3 +61,5 @@ export default function AllCars() {
     </div>
   )
 }
+
+export default AllCars

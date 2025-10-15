@@ -18,23 +18,20 @@ const CarDetailsPage = () => {
   const loading = carLoading || userLoading || carTypeLoading
   const error = carError || userError || carTypeError
 
-  // Find the specific car
   const car = cars?.find(c => c.id === Number(id))
   const owner = users?.find(user => user.id === car?.ownerId)
   const carType = carTypes?.find(type => type.id === car?.carTypeId)
 
-  // Show loading state
   if (loading) {
     return (
       <MainLayout>
-        <section className="mx-auto flex min-h-screen flex-col items-center justify-center gap-8 bg-[#265e78] py-10 text-white">
+        <section className="mx-auto flex min-h-screen flex-col items-center justify-center gap-8 bg-primary-dark py-10 text-white">
           <p className="text-xl text-white">Loading car details...</p>
         </section>
       </MainLayout>
     )
   }
 
-  // Show error state
   if (error) {
     return (
       <MainLayout>
@@ -44,7 +41,7 @@ const CarDetailsPage = () => {
       </MainLayout>
     )
   }
-  // Show not found state
+
   if (!car) {
     return (
       <MainLayout>
@@ -54,8 +51,8 @@ const CarDetailsPage = () => {
       </MainLayout>
     )
   }
-  // Map API data to CarDetails props
-  const carProps = {
+
+  const Car = {
     carName: car.name,
     owner: owner?.name || 'Unknown Owner',
     model: carType?.name || 'Unknown Model',
@@ -77,7 +74,7 @@ const CarDetailsPage = () => {
             DETAILS
           </h1>
         </div>
-        <CarDetails {...carProps} />
+        <CarDetails {...Car} />
       </section>
     </MainLayout>
   )
