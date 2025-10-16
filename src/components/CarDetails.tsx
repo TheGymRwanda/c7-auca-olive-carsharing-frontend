@@ -16,43 +16,34 @@ const CarDetails = ({
   fuelType,
   restriction,
   image = yellowCar,
-}: CarDetailsProps) => (
-  <>
-    <img src={image} className="h-auto w-full max-w-[356px] object-contain" alt={carName} />
-    <div className="flex flex-col gap-2 pl-6 pt-2">
-      <h3 className="mb-8 mt-16 font-playfair text-2xl">{carName}</h3>
+}: CarDetailsProps) => {
+  const details = [
+    { id: "owner", icon: <ProfileIcon />, value: owner },
+    { id: "model", icon: <CarIcon />, value: model },
+    { id: "plate", icon: <img src={plateNumber} alt="Plate number icon" />, value: plate },
+    { id: "horsepower", icon: <HorseIcon />, value: horsepower },
+    { id: "fuelType", icon: <FuelIcon />, value: fuelType },
+    { id: "alert", icon: <img src={alert} alt="Alert icon" />, value: restriction },
+  ]
 
-      <div className="flex items-center gap-3">
-        <ProfileIcon />
-        <span>{owner}</span>
-      </div>
-
-      <div className="flex items-center gap-2">
-        <CarIcon />
-        <span>{model}</span>
-      </div>
-
-      <div className="flex items-center gap-2">
-        <img src={plateNumber} alt="Plate number icon" />
-        <span>{plate}</span>
-      </div>
-
-      <div className="flex items-center gap-2">
-        <HorseIcon />
-        <span>{horsepower}</span>
-      </div>
-
-      <div className="flex items-center gap-2">
-        <FuelIcon />
-        <span>{fuelType}</span>
-      </div>
-
-      <div className="flex items-center gap-2">
-        <img src={alert} alt="Restriction icon" />
-        <span className="font-bold">{restriction}</span>
+  return (
+    <div className="flex flex-col items-center gap-4 w-full max-w-md">
+      <img
+        src={image}
+        alt={carName}
+        className="h-auto max-h-[40vh] w-full object-contain rounded-md"
+      />
+      <h3 className="font-playfair text-2xl mt-4 mb-6">{carName}</h3>
+      <div className="flex flex-col gap-3 w-full">
+        {details.map(({ id, icon, value }) => (
+          <div key={id} className="flex items-center gap-2">
+            {icon}
+            <span className={id === "alert" ? "font-bold" : ""}>{value}</span>
+          </div>
+        ))}
       </div>
     </div>
-  </>
-)
+  )
+}
 
 export default CarDetails
