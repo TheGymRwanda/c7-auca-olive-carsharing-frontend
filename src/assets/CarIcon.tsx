@@ -1,10 +1,8 @@
-import { ReactElement } from "react"
-
 interface CarIconProps {
   className?: string
 }
 
-const CarIcon = ({ className }: CarIconProps): ReactElement => (
+const CarIcon = ({ className }: CarIconProps) => (
   <svg
     width="24"
     height="24"

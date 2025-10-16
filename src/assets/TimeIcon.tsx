@@ -1,10 +1,8 @@
-import { ReactElement } from "react"
-
 interface TimeIconProps {
   className?: string
 }
 
-const TimeIcon = ({ className }: TimeIconProps): ReactElement => (
+const TimeIcon = ({ className }: TimeIconProps) => (
   <svg
     width="24"
     height="24"

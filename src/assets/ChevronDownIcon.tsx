@@ -1,10 +1,8 @@
-import { ReactElement } from "react"
-
 interface ChevronDownIconProps {
   className?: string
 }
 
-const ChevronDownIcon = ({ className }: ChevronDownIconProps): ReactElement => (
+const ChevronDownIcon = ({ className }: ChevronDownIconProps) => (
   <svg
     width="24"
     height="24"

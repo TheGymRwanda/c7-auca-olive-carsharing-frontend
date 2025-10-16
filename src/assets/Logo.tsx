@@ -1,11 +1,9 @@
-import { ReactElement } from "react"
-
 interface LogoProps {
   className?: string
 }
 
 // eslint-disable-next-line max-lines-per-function
-const Logo = ({ className }: LogoProps): ReactElement => (
+const Logo = ({ className }: LogoProps) => (
   <svg
     width="42"
     height="42"

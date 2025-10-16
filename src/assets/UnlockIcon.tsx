@@ -1,9 +1,7 @@
-import { ReactElement } from "react"
-
 interface UnlockIconProps {
   className?: string
 }
-const UnlockIcon = ({ className }: UnlockIconProps): ReactElement => (
+const UnlockIcon = ({ className }: UnlockIconProps) => (
   <svg
     width="18"
     height="18"

@@ -1,10 +1,8 @@
-import { ReactElement } from "react"
-
 interface DateIconProps {
   className?: string
 }
 
-const DateIcon = ({ className }: DateIconProps): ReactElement => (
+const DateIcon = ({ className }: DateIconProps) => (
   <svg
     width="18"
     height="20"

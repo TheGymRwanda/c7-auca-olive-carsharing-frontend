@@ -1,9 +1,7 @@
-import { ReactElement } from "react"
-
 interface LockIconProps {
   className?: string
 }
-const LockIcon = ({ className }: LockIconProps): ReactElement => (
+const LockIcon = ({ className }: LockIconProps) => (
   <svg
     width="13"
     height="16"

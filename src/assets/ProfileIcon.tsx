@@ -1,10 +1,8 @@
-import { ReactElement } from "react"
-
 interface ProfileIconProps {
   className?: string
 }
 
-const ProfileIcon = ({ className }: ProfileIconProps): ReactElement => (
+const ProfileIcon = ({ className }: ProfileIconProps) => (
   <svg
     width="24"
     height="24"

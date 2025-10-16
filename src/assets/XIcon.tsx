@@ -1,12 +1,10 @@
-import { ReactElement } from "react"
-
 interface XIconProps {
   className?: string
   width?: string
   height?: string
 }
 
-const XIcon = ({ className, width = "18", height = "18" }: XIconProps): ReactElement => (
+const XIcon = ({ className, width = "18", height = "18" }: XIconProps) => (
   <svg
     width={width}
     height={height}

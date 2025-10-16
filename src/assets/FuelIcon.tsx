@@ -1,10 +1,8 @@
-import { ReactElement } from "react"
-
 interface ProfileIconProps {
   className?: string
 }
 
-const FuelIcon = ({ className }: ProfileIconProps): ReactElement => (
+const FuelIcon = ({ className }: ProfileIconProps) => (
   <svg
     width="24"
     height="24"
