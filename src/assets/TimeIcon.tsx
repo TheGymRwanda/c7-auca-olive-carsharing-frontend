@@ -4,8 +4,7 @@ interface TimeIconProps {
   className?: string
 }
 
-export default function TimeIcon({ className }: TimeIconProps): ReactElement {
-  return (
+const TimeIcon = ({ className }: TimeIconProps): ReactElement =>(
     <svg
       width="24"
       height="24"
@@ -23,4 +22,4 @@ export default function TimeIcon({ className }: TimeIconProps): ReactElement {
       <path d="M12 7L12 5" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   )
-}
+export default TimeIcon
