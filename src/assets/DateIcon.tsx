@@ -1,8 +1,6 @@
-interface DateIconProps {
-  className?: string
-}
+import { IconProps } from "../util/types"
 
-const DateIcon = ({ className }: DateIconProps) => (
+const DateIcon = ({ className }: IconProps) => (
   <svg
     width="18"
     height="20"
@@ -19,4 +17,5 @@ const DateIcon = ({ className }: DateIconProps) => (
     />
   </svg>
 )
+
 export default DateIcon

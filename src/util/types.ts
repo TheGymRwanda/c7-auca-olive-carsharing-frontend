@@ -39,3 +39,11 @@ export interface MenuBarProps {
   isDrawerOpen: boolean
   toggleDrawer: () => void
 }
+
+export interface BackButtonProps {
+  previousPath: string
+}
+
+export interface IconProps {
+  className?: string
+}

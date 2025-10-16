@@ -1,7 +1,6 @@
-interface LockIconProps {
-  className?: string
-}
-const LockIcon = ({ className }: LockIconProps) => (
+import { IconProps } from "../util/types"
+
+const LockIcon = ({ className }: IconProps) => (
   <svg
     width="13"
     height="16"
@@ -18,4 +17,5 @@ const LockIcon = ({ className }: LockIconProps) => (
     />
   </svg>
 )
+
 export default LockIcon

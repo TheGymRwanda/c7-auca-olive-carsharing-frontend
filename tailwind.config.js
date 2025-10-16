@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         lora: ['Lora', 'serif'],
+        cursive: ['Dancing Script', 'Pacifico', 'Great Vibes', 'cursive'],
         inter: ['Inter', 'sans-serif'],
         playfair: ['Playfair Display', 'serif'],
       },

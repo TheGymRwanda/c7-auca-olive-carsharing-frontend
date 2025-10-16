@@ -2,6 +2,7 @@ import MainLayout from "../components/MainLayout"
 import Button from "../components/Button"
 import MoniShareTitle from "../components/MoniShareTitle"
 import { useNavigate } from "react-router-dom"
+
 const HomePage = () => {
   const navigate = useNavigate()
   return (

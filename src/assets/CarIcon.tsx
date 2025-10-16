@@ -1,8 +1,6 @@
-interface CarIconProps {
-  className?: string
-}
+import { IconProps } from "../util/types"
 
-const CarIcon = ({ className }: CarIconProps) => (
+const CarIcon = ({ className }: IconProps) => (
   <svg
     width="24"
     height="24"

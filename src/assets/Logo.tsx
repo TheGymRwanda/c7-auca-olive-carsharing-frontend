@@ -1,9 +1,7 @@
-interface LogoProps {
-  className?: string
-}
+import { IconProps } from "../util/types"
 
 // eslint-disable-next-line max-lines-per-function
-const Logo = ({ className }: LogoProps) => (
+const Logo = ({ className }: IconProps) => (
   <svg
     width="42"
     height="42"
@@ -92,4 +90,5 @@ const Logo = ({ className }: LogoProps) => (
     />
   </svg>
 )
+
 export default Logo

@@ -1,8 +1,6 @@
-interface ProfileIconProps {
-  className?: string
-}
+import { IconProps } from "../util/types"
 
-const ProfileIcon = ({ className }: ProfileIconProps) => (
+const ProfileIcon = ({ className }: IconProps) => (
   <svg
     width="24"
     height="24"
@@ -26,4 +24,5 @@ const ProfileIcon = ({ className }: ProfileIconProps) => (
     />
   </svg>
 )
+
 export default ProfileIcon

@@ -1,8 +1,6 @@
-interface TimeIconProps {
-  className?: string
-}
+import { IconProps } from "../util/types"
 
-const TimeIcon = ({ className }: TimeIconProps) => (
+const TimeIcon = ({ className }: IconProps) => (
   <svg
     width="24"
     height="24"
@@ -20,4 +18,5 @@ const TimeIcon = ({ className }: TimeIconProps) => (
     <path d="M12 7L12 5" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 )
+
 export default TimeIcon

@@ -1,8 +1,6 @@
-interface ProfileIconProps {
-  className?: string
-}
+import { IconProps } from "../util/types"
 
-const HorseIcon = ({ className }: ProfileIconProps) => (
+const HorseIcon = ({ className }: IconProps) => (
   <svg
     width="24"
     height="24"
@@ -20,4 +18,5 @@ const HorseIcon = ({ className }: ProfileIconProps) => (
     />
   </svg>
 )
+
 export default HorseIcon

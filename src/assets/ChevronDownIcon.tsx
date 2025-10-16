@@ -1,8 +1,6 @@
-interface ChevronDownIconProps {
-  className?: string
-}
+import { IconProps } from "../util/types"
 
-const ChevronDownIcon = ({ className }: ChevronDownIconProps) => (
+const ChevronDownIcon = ({ className }: IconProps) => (
   <svg
     width="24"
     height="24"
@@ -15,4 +13,5 @@ const ChevronDownIcon = ({ className }: ChevronDownIconProps) => (
     <path d="M6 9L12 15L18 9" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 )
+
 export default ChevronDownIcon

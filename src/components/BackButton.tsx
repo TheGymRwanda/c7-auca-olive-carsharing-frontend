@@ -1,10 +1,16 @@
+import ChevronBackIcon from "../assets/ChevronBackIcon"
 import { useNavigate } from "react-router-dom"
-import { ChevronBackIcon } from "../assets/ChevronBackIcon"
-const BackButton = () => {
+import { BackButtonProps } from "../util/types"
+
+const BackButton = ({ previousPath }: BackButtonProps) => {
   const navigate = useNavigate()
 
   const handleGoBack = () => {
-    navigate(-1)
+    if (window.history.length > 1) {
+      navigate(-1)
+    } else {
+      navigate(previousPath)
+    }
   }
 
   return (

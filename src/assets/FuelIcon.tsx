@@ -1,8 +1,6 @@
-interface ProfileIconProps {
-  className?: string
-}
+import { IconProps } from "../util/types"
 
-const FuelIcon = ({ className }: ProfileIconProps) => (
+const FuelIcon = ({ className }: IconProps) => (
   <svg
     width="24"
     height="24"
@@ -45,4 +43,5 @@ const FuelIcon = ({ className }: ProfileIconProps) => (
     <path d="M6 21H21.1111" stroke="#9CA3AF" strokeWidth="0.944444" strokeLinecap="round" />
   </svg>
 )
+
 export default FuelIcon

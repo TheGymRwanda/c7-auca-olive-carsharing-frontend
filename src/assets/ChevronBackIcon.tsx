@@ -1,8 +1,6 @@
-interface ChevronBackIconProps {
-  className?: string
-}
+import { IconProps } from "../util/types"
 
-const ChevronBackIcon = ({ className }: ChevronBackIconProps) => (
+const ChevronBackIcon = ({ className }: IconProps) => (
   <svg
     width="9"
     height="14"

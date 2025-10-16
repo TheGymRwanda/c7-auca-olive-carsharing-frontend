@@ -1,7 +1,6 @@
-interface UnlockIconProps {
-  className?: string
-}
-const UnlockIcon = ({ className }: UnlockIconProps) => (
+import { IconProps } from "../util/types"
+
+const UnlockIcon = ({ className }: IconProps) => (
   <svg
     width="18"
     height="18"
@@ -18,4 +17,5 @@ const UnlockIcon = ({ className }: UnlockIconProps) => (
     />
   </svg>
 )
+
 export default UnlockIcon
