@@ -1,10 +1,7 @@
-import { ReactElement } from 'react'
+import { ReactElement } from "react"
+import { IconProps } from "../util/types"
 
-interface ChevronBackIconProps {
-  className?: string
-}
-
-export function ChevronBackIcon({ className }: ChevronBackIconProps): ReactElement {
+export function ChevronBackIcon({ className }: IconProps): ReactElement {
   return (
     <svg
       width="9"

@@ -1,9 +1,7 @@
-import { ReactElement } from 'react'
+import { ReactElement } from "react"
+import { IconProps } from "../util/types"
 
-interface LockIconProps {
-  className?: string
-}
-export default function LockIcon({ className }: LockIconProps): ReactElement {
+export default function LockIcon({ className }: IconProps): ReactElement {
   return (
     <svg
       width="13"

@@ -1,10 +1,7 @@
-import { ReactElement } from 'react'
+import { ReactElement } from "react"
+import { IconProps } from "../util/types"
 
-interface CarIconProps {
-  className?: string
-}
-
-export default function CarPlusIcon({ className }: CarIconProps): ReactElement {
+export default function CarPlusIcon({ className }: IconProps): ReactElement {
   return (
     <svg
       width="24"

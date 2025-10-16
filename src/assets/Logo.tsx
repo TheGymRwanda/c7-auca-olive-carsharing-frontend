@@ -1,11 +1,8 @@
-import { ReactElement } from 'react'
-
-interface LogoProps {
-  className?: string
-}
+import { ReactElement } from "react"
+import { IconProps } from "../util/types"
 
 // eslint-disable-next-line max-lines-per-function
-export default function Logo({ className }: LogoProps): ReactElement {
+export default function Logo({ className }: IconProps): ReactElement {
   return (
     <svg
       width="42"
