@@ -1,9 +1,7 @@
 import { ReactElement } from "react"
+import { IconProps } from "../util/types"
 
-interface UnlockIconProps {
-  className?: string
-}
-export default function UnlockIcon({ className }: UnlockIconProps): ReactElement {
+export default function UnlockIcon({ className }: IconProps): ReactElement {
   return (
     <svg
       width="18"
