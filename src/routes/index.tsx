@@ -1,15 +1,15 @@
-import { ReactElement } from 'react'
-import { Route, Routes } from 'react-router-dom'
-import HomePage from '../pages/HomePage'
-import AllCars from '../pages/AllCars'
-import AddCar from '../pages/AddCar'
-import MyCars from '../pages/MyCars'
-import ErrorPage from '../pages/ErrorPage'
+import { ReactElement } from "react"
+import { Route, Routes } from "react-router-dom"
+import HomePage from "../pages/HomePage"
+import AllCars from "../pages/AllCars"
+import AddCar from "../pages/AddCar"
+import MyCars from "../pages/MyCars"
+import ErrorPage from "../pages/ErrorPage"
 //will put in this page after confirmation from the coach
 // import BookCar from '../pages/BookCar'
-import MyBookings from '../pages/MyBookings'
-import OwnRented from '../pages/OwnRented'
-import CarDetailsPage from '../pages/CarDetailsPage'
+import MyBookings from "../pages/MyBookings"
+import OwnRented from "../pages/OwnRented"
+import CarDetailsPage from "../pages/CarDetailsPage"
 
 export function AppRoutes(): ReactElement {
   return (
