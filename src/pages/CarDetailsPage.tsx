@@ -35,7 +35,7 @@ const CarDetailsPage = () => {
   if (error) {
     return (
       <MainLayout>
-        <section className="mx-auto flex min-h-screen flex-col items-center justify-center gap-8 bg-[#265e78] py-10 text-white">
+        <section className="mx-auto flex min-h-screen flex-col items-center justify-center gap-8 bg-primary-dark py-10 text-white">
           <p className="text-xl text-red-300">Error loading car details: {error.message}</p>
         </section>
       </MainLayout>
@@ -45,7 +45,7 @@ const CarDetailsPage = () => {
   if (!car) {
     return (
       <MainLayout>
-        <section className="mx-auto flex min-h-screen flex-col items-center justify-center gap-8 bg-[#265e78] py-10 text-white">
+        <section className="mx-auto flex min-h-screen flex-col items-center justify-center gap-8 bg-primary-dark py-10 text-white">
           <p className="text-xl text-white">Car not found</p>
         </section>
       </MainLayout>
