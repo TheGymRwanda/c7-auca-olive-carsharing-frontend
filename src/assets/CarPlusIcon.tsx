@@ -4,7 +4,7 @@ interface CarIconProps {
   className?: string
 }
 
-export default function CarPlusIcon({ className }: CarIconProps): ReactElement {
+const CarPlusIcon = ({ className }: CarIconProps): ReactElement => {
   return (
     <svg
       width="24"
@@ -29,3 +29,4 @@ export default function CarPlusIcon({ className }: CarIconProps): ReactElement {
     </svg>
   )
 }
+export default CarPlusIcon
