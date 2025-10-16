@@ -1,10 +1,7 @@
 import { ReactElement } from "react"
+import { IconProps } from "../util/types"
 
-interface DateIconProps {
-  className?: string
-}
-
-export default function DateIcon({ className }: DateIconProps): ReactElement {
+export default function DateIcon({ className }: IconProps): ReactElement {
   return (
     <svg
       width="18"

@@ -1,10 +1,7 @@
 import { ReactElement } from "react"
+import { IconProps } from "../util/types"
 
-interface TimeIconProps {
-  className?: string
-}
-
-export default function TimeIcon({ className }: TimeIconProps): ReactElement {
+export default function TimeIcon({ className }: IconProps): ReactElement {
   return (
     <svg
       width="24"

@@ -32,7 +32,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       "inline-flex items-center justify-center font-medium rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
 
     const variantClasses: Record<ButtonVariant, string> = {
-      primary: "bg-white text-primary-dark hover:bg-gray-50 focus:ring-primary-dark",
+      primary: "bg-white text-primary-dark hover:bg-gray-300 focus:ring-primary-dark",
       secondary: "bg-primary-dark text-white hover:bg-primary-light focus:ring-primary-dark",
       ghost: "bg-ghost-light text-primary hover:bg-ghost-dark focus:ring-ghost-light",
       outlineWhite:

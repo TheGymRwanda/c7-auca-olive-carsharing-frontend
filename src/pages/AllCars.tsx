@@ -39,7 +39,7 @@ const AllCars = () => {
       <MainLayout>
         <div className="mt-8 flex w-full items-center justify-center px-5">
           <div className="flex-none">
-            <BackButton />
+            <BackButton previousPath="/" />
           </div>
           <h1 className="flex-1 text-center font-lora text-3xl font-medium text-white">ALL CARS</h1>
         </div>
