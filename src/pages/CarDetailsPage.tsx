@@ -71,7 +71,7 @@ const CarDetailsPage = () => {
       <section className="mx-auto flex min-h-screen flex-col items-center justify-center gap-8 bg-[#265e78] py-10 text-white">
         <div className="flex w-full items-center justify-center">
           <div className="flex-none">
-            <BackButton />
+            <BackButton previousPath="/allcars" />
           </div>
           <h1 className="mr-10 flex-1 text-center font-lora text-3xl font-medium text-white">
             DETAILS
