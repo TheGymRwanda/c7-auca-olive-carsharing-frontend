@@ -2,7 +2,7 @@ import { ChevronBackIcon } from "../assets/ChevronBackIcon"
 import { useNavigate } from "react-router-dom"
 import { BackButtonProps } from "../util/types"
 
-function BackButton({ previousPath }: BackButtonProps) {
+const BackButton = ({ previousPath }: BackButtonProps) => {
   const navigate = useNavigate()
 
   const handleGoBack = () => {
