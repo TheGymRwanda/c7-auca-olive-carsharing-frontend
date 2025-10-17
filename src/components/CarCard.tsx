@@ -11,6 +11,9 @@ const CarCard = ({
   carType = "Moni Cooper",
   carImage = YellowCar,
 }: CarCardProps) => {
+  const displayCarName =
+    /^[0-9]+$/.test(carName) && carName.length > 8 ? carName.slice(0, 10) + "..." : carName
+
   const info = [
     { id: "owner", icon: <ProfileIcon />, text: carOwner },
     { id: "type", icon: <CarIcon />, text: carType },
@@ -25,7 +28,7 @@ const CarCard = ({
           </div>
 
           <div className="flex flex-col gap-3 text-white">
-            <p className="mb-2 font-playfair text-[25px]">{carName}</p>
+            <p className="mb-2 font-playfair text-[25px]">{displayCarName}</p>
 
             {info.map(item => (
               <div key={item.id} className="flex items-center gap-2">

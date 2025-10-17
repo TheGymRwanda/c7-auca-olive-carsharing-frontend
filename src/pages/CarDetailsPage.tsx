@@ -29,14 +29,15 @@ const CarDetailsPage = () => {
   if (loadingCars) {
     return (
       <MainLayout>
-        <div className="flex flex-1 items-center justify-center h-full"> Loading...</div>
+        <div className="flex flex-1 items-center justify-center h-full text-white">Loading...</div>
       </MainLayout>
     )
   }
+
   if (!car) {
     return (
       <MainLayout>
-        <div className="flex flex-col items-center justify-center h-full text-center">
+        <div className="flex flex-col items-center justify-center h-full text-center text-white">
           <p className="text-2xl text-red-500 mb-4">Car not found!</p>
           <BackButton />
         </div>
@@ -44,45 +45,65 @@ const CarDetailsPage = () => {
     )
   }
 
+  const details = [
+    {
+      id: "owner",
+      icon: <ProfileIcon />,
+      label: owner?.name ?? `Owner ID: ${car.ownerId}`,
+    },
+    {
+      id: "model",
+      icon: <CarIcon />,
+      label: carType?.name ?? "Unknown Type",
+    },
+    {
+      id: "plate",
+      icon: <img src={plateNumber} alt="license plate" />,
+      label: car.licensePlate ?? "No license plate",
+    },
+    {
+      id: "horsepower",
+      icon: <HorseIcon />,
+      label: `${car.horsepower} HP`,
+    },
+    {
+      id: "fuel",
+      icon: <FuelIcon />,
+      label: car.fuelType.charAt(0).toUpperCase() + car.fuelType.slice(1),
+    },
+    {
+      id: "info",
+      icon: <img src={alert} alt="info" />,
+      label: car.info || "No additional info",
+    },
+  ]
+
   return (
     <MainLayout>
-      <div className="mt-6 flex flex-col text-white overflow-hidden">
-        <div className="flex w-full items-center justify-between px-6 md:px-20 mb-6 ">
+      <div className="mt-6 flex flex-col text-white overflow-hidden items-center">
+        <div className="flex w-full items-center justify-between px-6 md:px-20 mb-6">
           <BackButton />
           <h1 className="text-3xl font-lora tracking-wider text-center flex-1">DETAILS</h1>
           <div className="w-10" />
         </div>
+        <div className="lg:flex gap-8 ml-10 items-center">
+          <img
+            src={carImage}
+            alt={car.name}
+            className="h-[20%] w-[70%] max-w-md object-contain mx-auto"
+          />
 
-        <img src={carImage} alt={car.name} className="h-[20%] w-[70%] object-contain mx-auto" />
+          <div className="text-left px-6 w-full md:items-center md:w-2/3">
+            <h2 className="text-xl font-semibold mb-4">{car.name}</h2>
 
-        <div className="text-left px-10">
-          <h2 className="text-xl font-semibold mb-3">{car.name}</h2>
-
-          <div className="space-y-2">
-            <p className="flex items-center">
-              <ProfileIcon />
-              <span className="ml-2">{owner?.name ?? `Owner ID: ${car.ownerId}`}</span>
-            </p>
-            <p className="flex items-center">
-              <CarIcon />
-              <span className="ml-2">{carType?.name ?? "Unknown Type"}</span>
-            </p>
-            <p className="flex items-center">
-              <img src={plateNumber} alt="license plate" />
-              <span className="ml-2">{car.licensePlate ?? "No license plate"}</span>
-            </p>
-            <p className="flex items-center">
-              <HorseIcon />
-              <span className="ml-2">{car.horsepower} HP</span>
-            </p>
-            <p className="flex items-center">
-              <FuelIcon />
-              <span className="ml-2 capitalize">{car.fuelType}</span>
-            </p>
-            <p className="flex items-center">
-              <img src={alert} alt="info" />
-              <span className="ml-2">{car.info || "No additional info"}</span>
-            </p>
+            <div className="space-y-2">
+              {details.map(detail => (
+                <p key={detail.id} className="flex items-center">
+                  {detail.icon}
+                  <span className="ml-2">{detail.label}</span>
+                </p>
+              ))}
+            </div>
           </div>
         </div>
       </div>
