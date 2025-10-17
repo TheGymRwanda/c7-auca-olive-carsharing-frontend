@@ -42,7 +42,7 @@ const AllCars = () => {
           </div>
           <h1 className="flex-1 text-center font-lora text-3xl font-medium text-white">ALL CARS</h1>
         </div>
-        <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-3">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
           {cars.map(car => {
             const owner = users?.find(user => user.id === car.ownerId)
             const carType = carTypes?.find(type => type.id === car.carTypeId)

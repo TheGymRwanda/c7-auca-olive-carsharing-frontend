@@ -12,8 +12,7 @@ const CarCard = ({
   carImage = YellowCar,
 }: CarCardProps) => {
   const displayCarName =
-    /^[0-9]+$/.test(carName) && carName.length > 8 ? carName.slice(0, 10) + "..." : carName
-
+    /^[0-9]+$/.test(carName) && carName.length > 10 ? carName.slice(0, 10) + "..." : carName
   const info = [
     { id: "owner", icon: <ProfileIcon />, text: carOwner },
     { id: "type", icon: <CarIcon />, text: carType },
@@ -27,7 +26,7 @@ const CarCard = ({
             <img src={carImage} alt={carName} className="h-[150px] w-[200px] object-contain" />
           </div>
 
-          <div className="flex flex-col gap-3 text-white">
+          <div className="flex flex-col gap-3 text-white flex-wrap">
             <p className="mb-2 font-playfair text-[25px]">{displayCarName}</p>
 
             {info.map(item => (

@@ -80,23 +80,25 @@ const CarDetailsPage = () => {
 
   return (
     <MainLayout>
-      <div className="mt-6 flex flex-col text-white overflow-hidden items-center">
+      <div className="mt-6 w-full flex flex-col text-white overflow-hidden items-center">
         <div className="flex w-full items-center justify-between px-6 md:px-20 mb-6">
           <BackButton />
-          <h1 className="text-3xl font-lora tracking-wider text-center flex-1">DETAILS</h1>
+          <h1 className="text-3xl font-lora tracking-wider text-center flex-1 md:text-4xl">
+            DETAILS
+          </h1>
           <div className="w-10" />
         </div>
-        <div className="lg:flex gap-8 ml-10 items-center">
+        <div className="md:gap-3 lg:flex lg:gap-20 items-center w-full lg:justify-between ml-10">
           <img
             src={carImage}
             alt={car.name}
-            className="h-[20%] w-[70%] max-w-md object-contain mx-auto"
+            className="h-[20%] w-[70%] max-w-md object-contain mx-auto md:w-full lg:mx-32"
           />
 
-          <div className="text-left px-6 w-full md:items-center md:w-2/3">
-            <h2 className="text-xl font-semibold mb-4">{car.name}</h2>
+          <div className="text-left px-6 w-full md:items-center md:ml-20">
+            <h2 className="text-xl md:text-2xl font-semibold mb-4">{car.name}</h2>
 
-            <div className="space-y-2">
+            <div className="space-y-2 md:text-xl">
               {details.map(detail => (
                 <p key={detail.id} className="flex items-center">
                   {detail.icon}
