@@ -40,3 +40,11 @@ export interface MenuBarProps {
   className?: string
   toggleDrawer: () => void
 }
+
+export interface BackButtonProps {
+  previousPath: string
+}
+
+export interface IconProps {
+  className?: string
+}

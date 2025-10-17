@@ -1,5 +1,4 @@
 import { BookingState, ChangeBookingStateDto } from "./api"
-
 import { apiUrl } from "./apiUrl"
 import { getAuthToken } from "./auth"
 
