@@ -37,5 +37,6 @@ export interface MainLayoutProps {
 
 export interface MenuBarProps {
   isDrawerOpen: boolean
+  className?: string
   toggleDrawer: () => void
 }
