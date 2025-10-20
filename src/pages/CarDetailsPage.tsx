@@ -39,7 +39,7 @@ const CarDetailsPage = () => {
       <MainLayout>
         <div className="flex flex-col items-center justify-center h-full text-center text-white">
           <p className="text-2xl text-red-500 mb-4">Car not found!</p>
-          <BackButton />
+          <BackButton previousPath={"/allcars"} />
         </div>
       </MainLayout>
     )
@@ -74,7 +74,7 @@ const CarDetailsPage = () => {
     <MainLayout>
       <div className="mt-6 w-full flex flex-col text-white overflow-hidden items-center">
         <div className="flex w-full items-center justify-between px-6 md:px-20 mb-6">
-          <BackButton />
+          <BackButton previousPath={""} />
           <h1 className="text-3xl font-lora tracking-wider text-center flex-1 md:text-4xl">
             DETAILS
           </h1>
