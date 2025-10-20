@@ -13,7 +13,7 @@ const Drawer = () => (
         <CarIcon />
         <p>Book A Car</p>
       </Link>
-      <Link to="/manage-bookings" className="flex flex-row space-x-4 hover:bg-white/20">
+      <Link to="/my-bookings" className="flex flex-row space-x-4 hover:bg-white/20">
         <img src={Stairs} alt="My Bookings icon" />
         <p>My Bookings</p>
       </Link>

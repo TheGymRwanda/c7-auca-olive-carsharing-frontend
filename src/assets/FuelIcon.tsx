@@ -1,10 +1,7 @@
 import { ReactElement } from "react"
+import { IconProps } from "../util/types"
 
-interface ProfileIconProps {
-  className?: string
-}
-
-export default function FuelIcon({ className }: ProfileIconProps): ReactElement {
+export default function FuelIcon({ className }: IconProps): ReactElement {
   return (
     <svg
       width="24"

@@ -1,4 +1,5 @@
 import MainLayout from "../components/MainLayout"
+
 const AddCar = () => (
   <MainLayout>
     <div className="flex min-h-screen flex-col items-center justify-center bg-primary-dark p-8 text-white">
