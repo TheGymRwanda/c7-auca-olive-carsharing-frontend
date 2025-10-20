@@ -1,5 +1,5 @@
 import MainLayout from "../components/MainLayout"
-import Input from "../components/input"
+import Input from "../components/Input"
 import Dropdown from "../components/Dropdown"
 import NumberInput from "../components/NumberInput"
 import Button from "../components/Button"
