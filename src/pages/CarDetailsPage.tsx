@@ -46,16 +46,8 @@ const CarDetailsPage = () => {
   }
 
   const details = [
-    {
-      id: "owner",
-      icon: <ProfileIcon />,
-      label: owner?.name ?? `Owner ID: ${car.ownerId}`,
-    },
-    {
-      id: "model",
-      icon: <CarIcon />,
-      label: carType?.name ?? "Unknown Type",
-    },
+    { id: "owner", icon: <ProfileIcon />, label: owner?.name ?? `Owner ID: ${car.ownerId}` },
+    { id: "model", icon: <CarIcon />, label: carType?.name ?? "Unknown Type" },
     {
       id: "plate",
       icon: <img src={plateNumber} alt="license plate" />,

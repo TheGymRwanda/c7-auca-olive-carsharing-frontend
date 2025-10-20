@@ -13,7 +13,7 @@ const AllCars = () => {
   if (loading) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-primary-dark">
-        <p className="text-xl text-white">Loading cars...</p>
+        <p className="text-xl text-white">Loading...</p>
       </div>
     )
   }
