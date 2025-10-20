@@ -56,12 +56,14 @@ const CarDetailsPage = () => {
     {
       id: "horsepower",
       icon: <HorseIcon />,
-      label: `${car.horsepower} HP`,
+      label: car.horsepower ? `${car.horsepower} HP` : "Unknown HP",
     },
     {
       id: "fuel",
       icon: <FuelIcon />,
-      label: car.fuelType.charAt(0).toUpperCase() + car.fuelType.slice(1),
+      label: car.fuelType
+        ? car.fuelType.charAt(0).toUpperCase() + car.fuelType.slice(1)
+        : "Unknown fuel type",
     },
     {
       id: "info",
@@ -74,7 +76,7 @@ const CarDetailsPage = () => {
     <MainLayout>
       <div className="mt-6 w-full flex flex-col text-white overflow-hidden items-center">
         <div className="flex w-full items-center justify-between px-6 md:px-20 mb-6">
-          <BackButton previousPath={""} />
+          <BackButton previousPath={"/allcars"} />
           <h1 className="text-3xl font-lora tracking-wider text-center flex-1 md:text-4xl">
             DETAILS
           </h1>

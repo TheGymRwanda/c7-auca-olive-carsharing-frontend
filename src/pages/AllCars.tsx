@@ -2,7 +2,6 @@ import BackButton from "../components/BackButton"
 import CarCard from "../components/CarCard"
 import MainLayout from "../components/MainLayout"
 import { useCars, useCarTypes, useUsers } from "../hooks"
-
 const AllCars = () => {
   const [{ data: cars, loading: carLoading, error: carError }] = useCars()
   const [{ data: users, loading: userLoading, error: userError }] = useUsers()
@@ -39,7 +38,7 @@ const AllCars = () => {
       <MainLayout>
         <div className="mt-8 flex w-full items-center justify-center px-5">
           <div className="flex-none">
-            <BackButton previousPath="/" />
+            <BackButton previousPath={""} />
           </div>
           <h1 className="flex-1 text-center font-lora text-3xl font-medium text-white">ALL CARS</h1>
         </div>
