@@ -1,8 +1,8 @@
-import MainLayout from '../components/MainLayout'
-import Input from '../components/input'
-import Dropdown from '../components/Dropdown'
-import NumberInput from '../components/NumberInput'
-import Button from '../components/Button'
+import MainLayout from "../components/MainLayout"
+import Input from "../components/input"
+import Dropdown from "../components/Dropdown"
+import NumberInput from "../components/NumberInput"
+import Button from "../components/Button"
 
 export default function AddCar() {
   return (
@@ -12,9 +12,9 @@ export default function AddCar() {
         <Input label="Name" placeholder="e.g My Nice Mini Car" value="" />
         <Dropdown
           label="Type"
-          options={['Mini Cooper', 'Other']}
+          options={["Mini Cooper", "Other"]}
           selectedValue=""
-          onSelect={() => 'n'}
+          onSelect={() => "n"}
         />
         <div className="grid grid-cols-2 gap-4 mb-4">
           <Input label="License Plate" placeholder="e.g. M-XY 123" value="" />
@@ -22,9 +22,9 @@ export default function AddCar() {
         </div>
         <Dropdown
           label="Fuel Type"
-          options={['e.g. 150', 'Other']}
+          options={["e.g. 150", "Other"]}
           selectedValue=""
-          onSelect={() => 'n'}
+          onSelect={() => "n"}
         />
         <Input label="Additional Information" placeholder="e.g. No smoking" value="" />
         <div className="flex justify-center gap-2 mt-auto mb-auto">

@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react'
-import { ChevronDownIcon } from '../assets/ChevronDownIcon'
+import React, { useState, useRef, useEffect } from "react"
+import { ChevronDownIcon } from "../assets/ChevronDownIcon"
 
 interface DropdownProps {
   label: string
@@ -18,8 +18,8 @@ const Dropdown: React.FC<DropdownProps> = ({ label, options, selectedValue, onSe
         setIsOpen(false)
       }
     }
-    document.addEventListener('mousedown', handleClickOutside)
-    return () => document.removeEventListener('mousedown', handleClickOutside)
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => document.removeEventListener("mousedown", handleClickOutside)
   }, [])
 
   return (
