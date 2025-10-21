@@ -3,7 +3,7 @@ import MainLayout from "../components/MainLayout"
 
 const ErrorPage = () => (
   <MainLayout>
-    <div className="flex min-h-screen flex-col items-center justify-center bg-primary-dark">
+    <div className="flex h-full flex-col items-center justify-center bg-primary-dark overflow-auto">
       <Error />
     </div>
   </MainLayout>

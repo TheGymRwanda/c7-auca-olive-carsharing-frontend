@@ -1,43 +1,35 @@
-import { useParams } from "react-router-dom"
 import { useEffect } from "react"
-import CarDetails from "../components/CarDetails"
-import BackButton from "../components/BackButton"
+import { useParams } from "react-router-dom"
 import MainLayout from "../components/MainLayout"
+import BackButton from "../components/BackButton"
 import { useCars, useCarTypes, useUsers } from "../hooks"
+import alert from "../assets/Alert.svg"
+import plateNumber from "../assets/LicensePlate.svg"
+import yellowCar from "../assets/YellowCar.svg"
+import ProfileIcon from "../assets/ProfileIcon"
+import CarIcon from "../assets/CarIcon"
+import HorseIcon from "../assets/HorseIcon"
+import FuelIcon from "../assets/FuelIcon"
 
 const CarDetailsPage = () => {
   const { id } = useParams()
+  const [{ data: cars, loading: loadingCars }] = useCars()
+  const [{ data: users }] = useUsers()
+  const [{ data: carTypes }] = useCarTypes()
+
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [id])
 
-  const [{ data: cars, loading: carLoading, error: carError }] = useCars()
-  const [{ data: users, loading: userLoading, error: userError }] = useUsers()
-  const [{ data: carTypes, loading: carTypeLoading, error: carTypeError }] = useCarTypes()
-
-  const loading = carLoading || userLoading || carTypeLoading
-  const error = carError || userError || carTypeError
-
   const car = cars?.find(c => c.id === Number(id))
-  const owner = users?.find(user => user.id === car?.ownerId)
-  const carType = carTypes?.find(type => type.id === car?.carTypeId)
+  const owner = users?.find(u => u.id === car?.ownerId)
+  const carType = carTypes?.find(t => t.id === car?.carTypeId)
+  const carImage = carType?.imageUrl ?? yellowCar
 
-  if (loading) {
+  if (loadingCars) {
     return (
       <MainLayout>
-        <section className="mx-auto flex min-h-screen flex-col items-center justify-center gap-8 bg-primary-dark py-10 text-white">
-          <p className="text-xl text-white">Loading car details...</p>
-        </section>
-      </MainLayout>
-    )
-  }
-
-  if (error) {
-    return (
-      <MainLayout>
-        <section className="mx-auto flex min-h-screen flex-col items-center justify-center gap-8 bg-primary-dark py-10 text-white">
-          <p className="text-xl text-red-300">Error loading car details: {error.message}</p>
-        </section>
+        <div className="flex flex-1 items-center justify-center h-full text-white">Loading...</div>
       </MainLayout>
     )
   }
@@ -45,37 +37,72 @@ const CarDetailsPage = () => {
   if (!car) {
     return (
       <MainLayout>
-        <section className="mx-auto flex min-h-screen flex-col items-center justify-center gap-8 bg-primary-dark py-10 text-white">
-          <p className="text-xl text-white">Car not found</p>
-        </section>
+        <div className="flex flex-col items-center justify-center h-full text-center text-white">
+          <p className="text-2xl text-red-500 mb-4">Car not found!</p>
+          <BackButton previousPath={"/allcars"} />
+        </div>
       </MainLayout>
     )
   }
 
-  const Car = {
-    carName: car.name,
-    owner: owner?.name || "Unknown Owner",
-    model: carType?.name || "Unknown Model",
-    plate: car.licensePlate || "N/A",
-    horsepower: `${car.horsepower}hp`,
-    fuelType: car.fuelType.charAt(0).toUpperCase() + car.fuelType.slice(1),
-    restriction: car.info || "No restrictions",
-    image: carType?.imageUrl || "",
-  }
+  const details = [
+    { id: "owner", icon: <ProfileIcon />, label: owner?.name ?? `Owner ID: ${car.ownerId}` },
+    { id: "model", icon: <CarIcon />, label: carType?.name ?? "Unknown Type" },
+    {
+      id: "plate",
+      icon: <img src={plateNumber} alt="license plate" />,
+      label: car.licensePlate ?? "No license plate",
+    },
+    {
+      id: "horsepower",
+      icon: <HorseIcon />,
+      label: car.horsepower ? `${car.horsepower} HP` : "Unknown HP",
+    },
+    {
+      id: "fuel",
+      icon: <FuelIcon />,
+      label: car.fuelType
+        ? car.fuelType.charAt(0).toUpperCase() + car.fuelType.slice(1)
+        : "Unknown fuel type",
+    },
+    {
+      id: "info",
+      icon: <img src={alert} alt="info" />,
+      label: car.info || "No additional info",
+    },
+  ]
 
   return (
     <MainLayout>
-      <section className="mx-auto flex min-h-screen flex-col items-center justify-center gap-8 bg-primary-dark py-10 text-white">
-        <div className="flex w-full items-center justify-center">
-          <div className="flex-none">
-            <BackButton previousPath="/allcars" />
-          </div>
-          <h1 className="mr-10 flex-1 text-center font-lora text-3xl font-medium text-white">
+      <div className="mt-6 w-full flex flex-col text-white overflow-hidden items-center">
+        <div className="flex w-full items-center justify-between px-6 md:px-20 mb-6">
+          <BackButton previousPath={"/allcars"} />
+          <h1 className="text-3xl font-lora tracking-wider text-center flex-1 md:text-4xl">
             DETAILS
           </h1>
+          <div className="w-10" />
         </div>
-        <CarDetails {...Car} />
-      </section>
+        <div className="md:gap-3 lg:flex lg:gap-20 items-center w-full lg:justify-between ml-10">
+          <img
+            src={carImage}
+            alt={car.name}
+            className="h-[20%] w-[70%] max-w-md object-contain mx-auto md:w-full lg:mx-32"
+          />
+
+          <div className="text-left px-6 w-full md:items-center md:ml-20">
+            <h2 className="text-xl md:text-2xl font-semibold mb-4">{car.name}</h2>
+
+            <div className="space-y-2 md:text-xl">
+              {details.map(detail => (
+                <p key={detail.id} className="flex items-center">
+                  {detail.icon}
+                  <span className="ml-2">{detail.label}</span>
+                </p>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
     </MainLayout>
   )
 }
