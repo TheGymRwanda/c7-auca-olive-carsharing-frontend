@@ -1,4 +1,4 @@
-import { ChevronBackIcon } from "../assets/ChevronBackIcon"
+import ChevronBackIcon from "../assets/ChevronBackIcon"
 import { useNavigate } from "react-router-dom"
 import { BackButtonProps } from "../util/types"
 
