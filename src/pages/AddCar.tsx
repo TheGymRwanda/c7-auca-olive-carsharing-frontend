@@ -5,7 +5,7 @@ import NumberInput from "../components/NumberInput"
 import Button from "../components/Button"
 import { useState } from "react"
 
-export const AddCar = () => {
+const AddCar = () => {
   const [carName, setCarName] = useState("")
   const [licensePlate, setLicensePlate] = useState("")
   const [horsePower, setHorsePower] = useState("")
@@ -69,3 +69,5 @@ export const AddCar = () => {
     </MainLayout>
   )
 }
+
+export default AddCar
