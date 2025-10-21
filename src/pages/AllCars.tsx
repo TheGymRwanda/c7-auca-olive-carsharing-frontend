@@ -2,7 +2,6 @@ import BackButton from "../components/BackButton"
 import CarCard from "../components/CarCard"
 import MainLayout from "../components/MainLayout"
 import { useCars, useCarTypes, useUsers } from "../hooks"
-
 const AllCars = () => {
   const [{ data: cars, loading: carLoading, error: carError }] = useCars()
   const [{ data: users, loading: userLoading, error: userError }] = useUsers()
@@ -14,7 +13,7 @@ const AllCars = () => {
   if (loading) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-primary-dark">
-        <p className="text-xl text-white">Loading cars...</p>
+        <p className="text-xl text-white">Loading...</p>
       </div>
     )
   }
@@ -39,25 +38,26 @@ const AllCars = () => {
       <MainLayout>
         <div className="mt-8 flex w-full items-center justify-center px-5">
           <div className="flex-none">
-            <BackButton previousPath="/" />
+            <BackButton previousPath={"/"} />
           </div>
           <h1 className="flex-1 text-center font-lora text-3xl font-medium text-white">ALL CARS</h1>
         </div>
-        {cars.map(car => {
-          const owner = users?.find(user => user.id === car.ownerId)
-          const carType = carTypes?.find(type => type.id === car.carTypeId)
-
-          return (
-            <CarCard
-              key={car.id}
-              carId={car.id}
-              carName={car.name}
-              carOwner={owner?.name}
-              carType={carType?.name}
-              carImage={carType?.imageUrl}
-            />
-          )
-        })}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+          {cars.map(car => {
+            const owner = users?.find(user => user.id === car.ownerId)
+            const carType = carTypes?.find(type => type.id === car.carTypeId)
+            return (
+              <CarCard
+                key={car.id}
+                carId={car.id}
+                carName={car.name}
+                carOwner={owner?.name}
+                carType={carType?.name}
+                carImage={carType?.imageUrl}
+              />
+            )
+          })}
+        </div>
       </MainLayout>
     </div>
   )

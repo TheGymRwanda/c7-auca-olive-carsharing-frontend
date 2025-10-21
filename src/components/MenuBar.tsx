@@ -1,7 +1,7 @@
+import { Link } from "react-router-dom"
+import type { MenuBarProps } from "../util/types"
 import ProfileIcon from "../assets/ProfileIcon"
 import Ecocar from "../assets/Ecocar.svg"
-import { Link } from "react-router-dom"
-import { MenuBarProps } from "../util/types"
 
 const MenuBar = ({ isDrawerOpen, toggleDrawer }: MenuBarProps) => {
   const isLoggedIn = true
