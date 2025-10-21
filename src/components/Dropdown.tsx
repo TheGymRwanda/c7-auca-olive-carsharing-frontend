@@ -23,7 +23,7 @@ const Dropdown: React.FC<DropdownProps> = ({ label, options, selectedValue, onSe
   }, [])
 
   return (
-    <div className="mb-4 font-inter">
+    <div className="mb-4 font-inter" ref={dropdownRef}>
       <label className="text-white text-left text-sm block mb-1">{label}</label>
       <button
         onClick={() => setIsOpen(!isOpen)}
@@ -39,7 +39,10 @@ const Dropdown: React.FC<DropdownProps> = ({ label, options, selectedValue, onSe
           {options.map(option => (
             <li
               key={option}
-              onClick={() => onSelect(option)}
+              onClick={() => {
+                onSelect(option)
+                setIsOpen(false)
+              }}
               className="p-2 hover:bg-primary-dark cursor-pointer"
             >
               {option}
