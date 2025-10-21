@@ -16,6 +16,7 @@ module.exports = {
           darkblue: '#111827',
           borderblue: '#0f172a',
           DEFAULT: '#447991',
+          inputbg: '#64A1C0',
         },
         accent: {
           yellow: '#EBF3AB',

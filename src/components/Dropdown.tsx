@@ -23,11 +23,11 @@ const Dropdown: React.FC<DropdownProps> = ({ label, options, selectedValue, onSe
   }, [])
 
   return (
-    <div className="mb-4">
+    <div className="mb-4 font-inter">
       <label className="text-white text-left text-sm block mb-1">{label}</label>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full bg-primary-light border-none rounded-full p-4 text-white placeholder:text-gray-300 flex justify-between items-center"
+        className="w-full bg-primary-inputbg border-none rounded-full p-4 text-white placeholder:text-gray-300 flex justify-between items-center"
       >
         <span>{selectedValue || `Select ${label.toLowerCase()}`}</span>
         <span className="text-gray-300">
