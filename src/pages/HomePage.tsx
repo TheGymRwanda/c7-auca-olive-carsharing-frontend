@@ -1,7 +1,8 @@
-import MainLayout from '../components/MainLayout'
-import Button from '../components/Button'
-import MoniShareTitle from '../components/MoniShareTitle'
-import { useNavigate } from 'react-router-dom'
+import MainLayout from "../components/MainLayout"
+import Button from "../components/Button"
+import MoniShareTitle from "../components/MoniShareTitle"
+import { useNavigate } from "react-router-dom"
+
 const HomePage = () => {
   const navigate = useNavigate()
   return (
@@ -13,7 +14,7 @@ const HomePage = () => {
           <br /> What are you up to today?
         </p>
         <div className="mt-14 flex w-full max-w-md flex-col items-center space-y-4 px-4">
-          <Button variant="primary" size="md" fullWidth onClick={() => navigate('/book-car')}>
+          <Button variant="primary" size="md" fullWidth onClick={() => navigate("/book-car")}>
             Book Car
           </Button>
           <p className="py-5 text-lg font-normal text-white">or</p>
@@ -21,7 +22,7 @@ const HomePage = () => {
             variant="outlineWhite"
             size="md"
             fullWidth
-            onClick={() => navigate('/own-rented')}
+            onClick={() => navigate("/own-rented")}
           >
             See My Cars
           </Button>
@@ -29,7 +30,7 @@ const HomePage = () => {
             variant="outlineWhite"
             size="md"
             fullWidth
-            onClick={() => navigate('/my-bookings')}
+            onClick={() => navigate("/my-bookings")}
           >
             See My Bookings
           </Button>

@@ -1,6 +1,6 @@
-import { ReactElement } from 'react'
-import { configure } from 'axios-hooks'
-import { AppRoutes } from './routes'
+import { configure } from "axios-hooks"
+import { AppRoutes } from "./routes"
+
 // Configure axios hooks
 // Do not delete this if you want to use the provided API hooks in `src/hooks`
 configure({
@@ -9,8 +9,6 @@ configure({
   },
 })
 
-function App(): ReactElement {
-  return <AppRoutes />
-}
+const App = () => <AppRoutes />
 
 export default App

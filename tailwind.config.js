@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         lora: ['Lora', 'serif'],
+        cursive: ['Dancing Script', 'Pacifico', 'Great Vibes', 'cursive'],
         inter: ['Inter', 'sans-serif'],
         playfair: ['Playfair Display', 'serif'],
       },
@@ -12,6 +13,8 @@ module.exports = {
         primary: {
           light: '#3E7591',
           dark: '#265E78',
+          darkblue: '#111827',
+          borderblue: '#0f172a',
           DEFAULT: '#447991',
         },
         accent: {
