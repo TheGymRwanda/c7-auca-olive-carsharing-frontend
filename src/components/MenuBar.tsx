@@ -2,10 +2,9 @@ import ProfileIcon from "../assets/ProfileIcon"
 import Ecocar from "../assets/Ecocar.svg"
 import { Link } from "react-router-dom"
 import { MenuBarProps } from "../util/types"
-import { useState } from "react"
 
 const MenuBar = ({ isDrawerOpen, toggleDrawer }: MenuBarProps) => {
-  const [isLoggedIn] = useState(true)
+  const isLoggedIn = true
 
   return (
     <div className="relative flex h-16 w-full items-center justify-between rounded-b-2xl bg-primary-darkblue px-6 text-white shadow-lg">
