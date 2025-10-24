@@ -17,6 +17,7 @@ module.exports = {
           borderblue: '#0f172a',
           ocean: '#64A1C0',
           DEFAULT: '#447991',
+          inputbg: '#64A1C0',
         },
         accent: {
           yellow: '#EBF3AB',

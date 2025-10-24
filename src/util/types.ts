@@ -49,3 +49,10 @@ export interface BackButtonProps {
 export interface IconProps {
   className?: string
 }
+
+export interface InputProps {
+  label: string
+  placeholder?: string
+  value: string | number
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
+}
