@@ -2,7 +2,7 @@ import React from "react"
 import { InputProps } from "../util/types"
 
 const input: React.FC<InputProps> = ({ label, placeholder, value, onChange }) => (
-  <div className="mb-4 font-inter">
+  <div className="my-2 font-inter">
     <label className="text-white text-left text-sm block mb-1">{label}</label>
     <input
       type="text"

@@ -15,9 +15,9 @@ const AddCar = () => {
 
   return (
     <MainLayout>
-      <div className="flex flex-col p-4 mt-8 min-h-screen text-center">
+      <div className="flex flex-col p-4 mt-4 h-screen text-center">
         <div className="flex-1">
-          <h1 className="text-white font-lora text-3xl font-medium mb-6">NEW CAR</h1>
+          <h1 className="text-white font-lora text-3xl font-medium mb-4">NEW CAR</h1>
           <Input
             label="Name"
             placeholder="e.g My Nice Mini Car"
@@ -30,7 +30,7 @@ const AddCar = () => {
             selectedValue={carType}
             onSelect={value => setCarType(value)}
           />
-          <div className="grid grid-cols-2 gap-4 mb-4">
+          <div className="grid grid-cols-2 gap-4">
             <Input
               label="License Plate"
               placeholder="e.g. M-XY 123"
