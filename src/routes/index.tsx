@@ -17,7 +17,6 @@ export function AppRoutes(): ReactElement {
     <Routes>
       <Route path="/" element={<LandingPage />} />
       <Route path="/home" element={<HomePage />} />
-      <Route path="/" element={<HomePage />} />
       <Route path="/login" element={<Login />} />
       <Route path="/allcars" element={<AllCars />} />
       <Route path="/add-car" element={<AddCar />} />

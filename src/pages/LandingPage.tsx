@@ -1,44 +1,32 @@
-import { Link } from "react-router-dom"
 import MoniShareTitle from "../components/MoniShareTitle"
 import Button from "../components/Button"
-import Ecocar from "../assets/Ecocar.svg"
+import MenuBar from "../components/MenuBar"
+import { useNavigate } from "react-router-dom"
 
-const LandingPage = () => (
-  <div className="flex min-h-screen flex-col bg-primary-dark">
-    <div className="relative flex h-16 w-full items-center justify-center rounded-b-2xl bg-primary-darkblue shadow-lg">
-      <div className="absolute -bottom-3 left-1/2 flex h-20 w-20 -translate-x-1/2 items-center justify-center rounded-full border-[3px] border-primary-borderblue bg-primary-darkblue shadow-md">
-        <img src={Ecocar} alt="Car Logo" className="h-12 w-16" />
-      </div>
-    </div>
-    <div className="flex flex-1 flex-col items-center px-2">
-      <div className="mt-16" />
+const LandingPage = () => {
+  const navigate = useNavigate()
+  return (
+    <div className="min-h-screen bg-primary-dark">
+      <MenuBar isDrawerOpen={false} toggleDrawer={() => {}} isLoggedIn={false} />
 
-      <div className="flex w-full max-w-[375px] flex-col items-center">
-        <MoniShareTitle />
+      <div className="mt-20 flex flex-col items-center justify-center px-4 text-white">
+        <div className="md:mt-24 lg:mt-12">
+          <MoniShareTitle />
+        </div>
 
-        <div className="mt-12" />
-
-        <p className="mb-16 w-full max-w-[358px] text-center font-lora text-[20px] font-medium leading-[28px] text-white">
-          Start sharing your Monis <br /> with the world
+        <p className="mt-28 w-full max-w-md text-center font-lora text-xl md:mt-32 md:text-2xl lg:mt-24">
+          <span className="block">Start sharing your Monis</span>
+          <span className="block">with the world</span>
         </p>
 
-        <div className="mb-6" />
-
-        <Link to="/login" className="flex w-full justify-center">
-          <Button
-            variant="primary"
-            size="lg"
-            fullWidth={false}
-            className="h-[45px] !w-[356px] rounded-[25px] text-base font-bold"
-          >
+        <div className="mt-24 flex w-full max-w-md flex-col items-center md:mt-32">
+          <Button variant="primary" fullWidth onClick={() => navigate("/login")}>
             Log In
           </Button>
-        </Link>
-
-        <div className="mb-14" />
+        </div>
       </div>
     </div>
-  </div>
-)
+  )
+}
 
 export default LandingPage
