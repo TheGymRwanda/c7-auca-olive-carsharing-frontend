@@ -39,6 +39,7 @@ export interface MenuBarProps {
   isDrawerOpen: boolean
   className?: string
   toggleDrawer: () => void
+  isLoggedIn?: boolean
 }
 
 export interface BackButtonProps {

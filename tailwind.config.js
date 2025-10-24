@@ -15,6 +15,7 @@ module.exports = {
           dark: '#265E78',
           darkblue: '#111827',
           borderblue: '#0f172a',
+          ocean: '#64A1C0',
           DEFAULT: '#447991',
         },
         accent: {
